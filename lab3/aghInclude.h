@@ -20,6 +20,8 @@ using namespace std;
 #include "aghException.h"
 #include "generator.h"
 
+//komentarz
+
 
 
 // ---------------------------------------------------------
