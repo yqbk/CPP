@@ -1,0 +1,311 @@
+\hypertarget{classaghMatrix}{\section{Dokumentacja szablonu klasy agh\-Matrix$<$ T $>$}
+\label{classaghMatrix}\index{agh\-Matrix$<$ T $>$@{agh\-Matrix$<$ T $>$}}
+}
+
+
+Klasa macierzy.  
+
+
+
+
+{\ttfamily \#include $<$agh\-Matrix.\-h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classaghMatrix_a5f34eda3b8d3544718f8f1e71618c41a}{\hyperlink{classaghMatrix_a5f34eda3b8d3544718f8f1e71618c41a}{agh\-Matrix} ()}\label{classaghMatrix_a5f34eda3b8d3544718f8f1e71618c41a}
+
+\begin{DoxyCompactList}\small\item\em Konstruktor bezparametrowy. \end{DoxyCompactList}\item 
+\hyperlink{classaghMatrix_ae6997ec51eb966b039fa64e901b09e31}{agh\-Matrix} (int r, int c)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametrowy. \end{DoxyCompactList}\item 
+\hyperlink{classaghMatrix_afef2f2c07892977a9f47651289363a4e}{agh\-Matrix} (\hyperlink{classaghMatrix}{agh\-Matrix}$<$ T $>$ const \&kopia)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametrowy. \end{DoxyCompactList}\item 
+\hypertarget{classaghMatrix_aa79e149efcac75f3762a94b7a2b881cd}{virtual \hyperlink{classaghMatrix_aa79e149efcac75f3762a94b7a2b881cd}{$\sim$agh\-Matrix} ()}\label{classaghMatrix_aa79e149efcac75f3762a94b7a2b881cd}
+
+\begin{DoxyCompactList}\small\item\em Destuktor. \end{DoxyCompactList}\item 
+void \hyperlink{classaghMatrix_a21c0ff1b04eb46898ec21baefe5bb575}{set\-Item} (int r, int c, T value)
+\begin{DoxyCompactList}\small\item\em Metoda służąca do zmiany warości danego elementu. \end{DoxyCompactList}\item 
+void \hyperlink{classaghMatrix_a13dcd86398c290fe911b83c73e32ac24}{set\-Items} (T $\ast$tablica)
+\begin{DoxyCompactList}\small\item\em Metoda służąca do zmiany warości wszystkich elementów z tablicy. \end{DoxyCompactList}\item 
+void \hyperlink{classaghMatrix_a6ac07da8c8a2340965f501a09ed5fcb4}{set\-Items} (int r, int c,...)
+\begin{DoxyCompactList}\small\item\em Metoda służąca do zmiany warości danej liczby elementów. \end{DoxyCompactList}\item 
+\hyperlink{classaghMatrix}{agh\-Matrix} const \& \hyperlink{classaghMatrix_abde1f7f5332c21ff840412fc04114a34}{operator=} (\hyperlink{classaghMatrix}{agh\-Matrix}$<$ T $>$ const \&macierz)
+\begin{DoxyCompactList}\small\item\em Przeciążony operator podstawienia. \end{DoxyCompactList}\item 
+const \hyperlink{classaghMatrix}{agh\-Matrix}$<$ T $>$ \hyperlink{classaghMatrix_a0d9cd6eba83f72c97b9c29f727af9f29}{operator+} (\hyperlink{classaghMatrix}{agh\-Matrix}$<$ T $>$ const \&macierz)
+\begin{DoxyCompactList}\small\item\em Przeciążony operator dodawania. \end{DoxyCompactList}\item 
+const \hyperlink{classaghMatrix}{agh\-Matrix} \hyperlink{classaghMatrix_a604e81dc78a1f05e4856b2a308af83bc}{operator$\ast$} (\hyperlink{classaghMatrix}{agh\-Matrix}$<$ T $>$ const \&macierz)
+\begin{DoxyCompactList}\small\item\em Przeciążony operator mnożenia. \end{DoxyCompactList}\item 
+bool \hyperlink{classaghMatrix_ad101fd2abddb7f94529fe7c52df6c480}{operator==} (\hyperlink{classaghMatrix}{agh\-Matrix}$<$ T $>$ const \&macierz) const 
+\begin{DoxyCompactList}\small\item\em Przeciążony operator przyrównania. \end{DoxyCompactList}\item 
+bool \hyperlink{classaghMatrix_a6085eb4f4090144039d3a66569214731}{operator!=} (\hyperlink{classaghMatrix}{agh\-Matrix}$<$ T $>$ const \&macierz) const 
+\begin{DoxyCompactList}\small\item\em Przeciążony operator !=. \end{DoxyCompactList}\item 
+T \hyperlink{classaghMatrix_a0e6db788e47230f0f8501eab79005dc4}{operator()} (int r, int c) const 
+\begin{DoxyCompactList}\small\item\em Przeciążony operator () \end{DoxyCompactList}\item 
+\hypertarget{classaghMatrix_a1677a3cff6e87d8b12dedb2cb1c4396c}{{\footnotesize template$<$$>$ }\\void {\bfseries set\-Items} (int r, int c,...)}\label{classaghMatrix_a1677a3cff6e87d8b12dedb2cb1c4396c}
+
+\item 
+\hypertarget{classaghMatrix_a8b70dfefa5c12796519dcc2c73efd653}{{\footnotesize template$<$$>$ }\\\hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $>$ const {\bfseries operator+} (\hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $>$ const \&macierz)}\label{classaghMatrix_a8b70dfefa5c12796519dcc2c73efd653}
+
+\item 
+\hypertarget{classaghMatrix_afaf30ce991ca883228faa5f9b42ded9e}{{\footnotesize template$<$$>$ }\\\hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $>$ const {\bfseries operator$\ast$} (\hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $>$ const \&macierz)}\label{classaghMatrix_afaf30ce991ca883228faa5f9b42ded9e}
+
+\item 
+\hypertarget{classaghMatrix_a9c07b6e6d5f6c026f5bf3da82d83b7b2}{{\footnotesize template$<$$>$ }\\void {\bfseries set\-Item} (int r, int c, char $\ast$value)}\label{classaghMatrix_a9c07b6e6d5f6c026f5bf3da82d83b7b2}
+
+\item 
+\hypertarget{classaghMatrix_a812185393e933bfd00339ec652a85769}{{\footnotesize template$<$$>$ }\\void {\bfseries set\-Items} (char $\ast$$\ast$tablica)}\label{classaghMatrix_a812185393e933bfd00339ec652a85769}
+
+\item 
+\hypertarget{classaghMatrix_a71906a062e5a6115faa3c4e6d3a538d1}{{\footnotesize template$<$$>$ }\\void {\bfseries set\-Items} (int r, int c,...)}\label{classaghMatrix_a71906a062e5a6115faa3c4e6d3a538d1}
+
+\item 
+\hypertarget{classaghMatrix_ab663b12fd56cf4aa499cd67434f0e6ec}{{\footnotesize template$<$$>$ }\\\hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $\ast$ $>$ const \& {\bfseries operator=} (\hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $\ast$ $>$ const \&macierz)}\label{classaghMatrix_ab663b12fd56cf4aa499cd67434f0e6ec}
+
+\item 
+\hypertarget{classaghMatrix_a01da87c9cb582f63ef9a54b180df7e7d}{{\footnotesize template$<$$>$ }\\const \hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $\ast$ $>$ {\bfseries operator+} (\hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $\ast$ $>$ const \&macierz)}\label{classaghMatrix_a01da87c9cb582f63ef9a54b180df7e7d}
+
+\item 
+\hypertarget{classaghMatrix_a625cd50cf56264c33ef7f9161cccb5f9}{{\footnotesize template$<$$>$ }\\const \hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $\ast$ $>$ {\bfseries operator$\ast$} (\hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $\ast$ $>$ const \&macierz)}\label{classaghMatrix_a625cd50cf56264c33ef7f9161cccb5f9}
+
+\item 
+\hypertarget{classaghMatrix_a09574b9a3132442f8a837d0718e2e933}{{\footnotesize template$<$$>$ }\\bool {\bfseries operator==} (\hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $\ast$ $>$ const \&macierz) const}\label{classaghMatrix_a09574b9a3132442f8a837d0718e2e933}
+
+\item 
+\hypertarget{classaghMatrix_a3ac665fcb300c8aca4ff0cc5aaedf4d3}{{\footnotesize template$<$$>$ }\\bool {\bfseries operator!=} (\hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $\ast$ $>$ const \&macierz) const}\label{classaghMatrix_a3ac665fcb300c8aca4ff0cc5aaedf4d3}
+
+\item 
+\hypertarget{classaghMatrix_a1677a3cff6e87d8b12dedb2cb1c4396c}{{\footnotesize template$<$$>$ }\\void {\bfseries set\-Items} (int r, int c,...)}\label{classaghMatrix_a1677a3cff6e87d8b12dedb2cb1c4396c}
+
+\item 
+\hypertarget{classaghMatrix_ab663b12fd56cf4aa499cd67434f0e6ec}{{\footnotesize template$<$$>$ }\\\hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $\ast$ $>$ const \& {\bfseries operator=} (\hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $\ast$ $>$ const \&macierz)}\label{classaghMatrix_ab663b12fd56cf4aa499cd67434f0e6ec}
+
+\item 
+\hypertarget{classaghMatrix_a01da87c9cb582f63ef9a54b180df7e7d}{{\footnotesize template$<$$>$ }\\const \hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $\ast$ $>$ {\bfseries operator+} (\hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $\ast$ $>$ const \&macierz)}\label{classaghMatrix_a01da87c9cb582f63ef9a54b180df7e7d}
+
+\item 
+\hypertarget{classaghMatrix_a625cd50cf56264c33ef7f9161cccb5f9}{{\footnotesize template$<$$>$ }\\const \hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $\ast$ $>$ {\bfseries operator$\ast$} (\hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $\ast$ $>$ const \&macierz)}\label{classaghMatrix_a625cd50cf56264c33ef7f9161cccb5f9}
+
+\item 
+\hypertarget{classaghMatrix_a09574b9a3132442f8a837d0718e2e933}{{\footnotesize template$<$$>$ }\\bool {\bfseries operator==} (\hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $\ast$ $>$ const \&macierz) const}\label{classaghMatrix_a09574b9a3132442f8a837d0718e2e933}
+
+\item 
+\hypertarget{classaghMatrix_a09574b9a3132442f8a837d0718e2e933}{{\footnotesize template$<$$>$ }\\bool {\bfseries operator==} (\hyperlink{classaghMatrix}{agh\-Matrix}$<$ char $\ast$ $>$ const \&macierz) const}\label{classaghMatrix_a09574b9a3132442f8a837d0718e2e933}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+\subsubsection*{template$<$class T$>$class agh\-Matrix$<$ T $>$}
+
+Klasa macierzy. 
+
+\begin{DoxyAuthor}{Autorzy}
+Jakub Syrek \& Katarzyna Żukowska 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+19.\-05.\-2014 
+\end{DoxyDate}
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classaghMatrix_ae6997ec51eb966b039fa64e901b09e31}{\index{agh\-Matrix@{agh\-Matrix}!agh\-Matrix@{agh\-Matrix}}
+\index{agh\-Matrix@{agh\-Matrix}!aghMatrix@{agh\-Matrix}}
+\subsubsection[{agh\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class M $>$ {\bf agh\-Matrix}$<$ M $>$\-::{\bf agh\-Matrix} (
+\begin{DoxyParamCaption}
+\item[{int}]{r, }
+\item[{int}]{c}
+\end{DoxyParamCaption}
+)}}\label{classaghMatrix_ae6997ec51eb966b039fa64e901b09e31}
+
+
+Konstruktor parametrowy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em r} & -\/ wiersze \mbox{[}rows\mbox{]} \\
+\hline
+{\em c} & -\/ kolumny \mbox{[}cols\mbox{]} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classaghMatrix_afef2f2c07892977a9f47651289363a4e}{\index{agh\-Matrix@{agh\-Matrix}!agh\-Matrix@{agh\-Matrix}}
+\index{agh\-Matrix@{agh\-Matrix}!aghMatrix@{agh\-Matrix}}
+\subsubsection[{agh\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf agh\-Matrix}$<$ T $>$\-::{\bf agh\-Matrix} (
+\begin{DoxyParamCaption}
+\item[{{\bf agh\-Matrix}$<$ T $>$ const \&}]{kopia}
+\end{DoxyParamCaption}
+)}}\label{classaghMatrix_afef2f2c07892977a9f47651289363a4e}
+
+
+Konstruktor parametrowy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em kopia} & -\/ obiekt klasy macierzowej \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classaghMatrix_a6085eb4f4090144039d3a66569214731}{\index{agh\-Matrix@{agh\-Matrix}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!aghMatrix@{agh\-Matrix}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf agh\-Matrix}$<$ T $>$\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{{\bf agh\-Matrix}$<$ T $>$ const \&}]{macierz}
+\end{DoxyParamCaption}
+) const}}\label{classaghMatrix_a6085eb4f4090144039d3a66569214731}
+
+
+Przeciążony operator !=. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em macierz} & -\/ macierz którą sprawdzamy \\
+\hline
+\end{DoxyParams}
+\hypertarget{classaghMatrix_a0e6db788e47230f0f8501eab79005dc4}{\index{agh\-Matrix@{agh\-Matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!aghMatrix@{agh\-Matrix}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class M $>$ M {\bf agh\-Matrix}$<$ M $>$\-::operator() (
+\begin{DoxyParamCaption}
+\item[{int}]{r, }
+\item[{int}]{c}
+\end{DoxyParamCaption}
+) const}}\label{classaghMatrix_a0e6db788e47230f0f8501eab79005dc4}
+
+
+Przeciążony operator () 
+
+
+\begin{DoxyParams}{Parametry}
+{\em r} & -\/ wiersze \mbox{[}rows\mbox{]} \\
+\hline
+{\em c} & -\/ kolumny \mbox{[}cols\mbox{]} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classaghMatrix_a604e81dc78a1f05e4856b2a308af83bc}{\index{agh\-Matrix@{agh\-Matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!aghMatrix@{agh\-Matrix}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const {\bf agh\-Matrix} {\bf agh\-Matrix}$<$ T $>$\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{{\bf agh\-Matrix}$<$ T $>$ const \&}]{macierz}
+\end{DoxyParamCaption}
+)}}\label{classaghMatrix_a604e81dc78a1f05e4856b2a308af83bc}
+
+
+Przeciążony operator mnożenia. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em macierz} & -\/ macierz przez którą przemnażamy \\
+\hline
+\end{DoxyParams}
+\hypertarget{classaghMatrix_a0d9cd6eba83f72c97b9c29f727af9f29}{\index{agh\-Matrix@{agh\-Matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!aghMatrix@{agh\-Matrix}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const {\bf agh\-Matrix}$<$T$>$ {\bf agh\-Matrix}$<$ T $>$\-::operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf agh\-Matrix}$<$ T $>$ const \&}]{macierz}
+\end{DoxyParamCaption}
+)}}\label{classaghMatrix_a0d9cd6eba83f72c97b9c29f727af9f29}
+
+
+Przeciążony operator dodawania. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em macierz} & -\/ macierz którą dodajemy \\
+\hline
+\end{DoxyParams}
+\hypertarget{classaghMatrix_abde1f7f5332c21ff840412fc04114a34}{\index{agh\-Matrix@{agh\-Matrix}!operator=@{operator=}}
+\index{operator=@{operator=}!aghMatrix@{agh\-Matrix}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf agh\-Matrix}$<$ T $>$ const \& {\bf agh\-Matrix}$<$ T $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf agh\-Matrix}$<$ T $>$ const \&}]{macierz}
+\end{DoxyParamCaption}
+)}}\label{classaghMatrix_abde1f7f5332c21ff840412fc04114a34}
+
+
+Przeciążony operator podstawienia. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em macierz} & -\/ macierz którą podstawiamy \\
+\hline
+\end{DoxyParams}
+\hypertarget{classaghMatrix_ad101fd2abddb7f94529fe7c52df6c480}{\index{agh\-Matrix@{agh\-Matrix}!operator==@{operator==}}
+\index{operator==@{operator==}!aghMatrix@{agh\-Matrix}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf agh\-Matrix}$<$ T $>$\-::operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf agh\-Matrix}$<$ T $>$ const \&}]{macierz}
+\end{DoxyParamCaption}
+) const}}\label{classaghMatrix_ad101fd2abddb7f94529fe7c52df6c480}
+
+
+Przeciążony operator przyrównania. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em macierz} & -\/ macierz którą porównujemy \\
+\hline
+\end{DoxyParams}
+\hypertarget{classaghMatrix_a21c0ff1b04eb46898ec21baefe5bb575}{\index{agh\-Matrix@{agh\-Matrix}!set\-Item@{set\-Item}}
+\index{set\-Item@{set\-Item}!aghMatrix@{agh\-Matrix}}
+\subsubsection[{set\-Item}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf agh\-Matrix}$<$ T $>$\-::set\-Item (
+\begin{DoxyParamCaption}
+\item[{int}]{r, }
+\item[{int}]{c, }
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)}}\label{classaghMatrix_a21c0ff1b04eb46898ec21baefe5bb575}
+
+
+Metoda służąca do zmiany warości danego elementu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em r} & -\/ wiersze \mbox{[}rows\mbox{]} \\
+\hline
+{\em c} & -\/ kolumny \mbox{[}cols\mbox{]} \\
+\hline
+{\em value} & -\/ wartość \\
+\hline
+\end{DoxyParams}
+\hypertarget{classaghMatrix_a13dcd86398c290fe911b83c73e32ac24}{\index{agh\-Matrix@{agh\-Matrix}!set\-Items@{set\-Items}}
+\index{set\-Items@{set\-Items}!aghMatrix@{agh\-Matrix}}
+\subsubsection[{set\-Items}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf agh\-Matrix}$<$ T $>$\-::set\-Items (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{tablica}
+\end{DoxyParamCaption}
+)}}\label{classaghMatrix_a13dcd86398c290fe911b83c73e32ac24}
+
+
+Metoda służąca do zmiany warości wszystkich elementów z tablicy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em tablica} & -\/ nowe wartości dla macierzy \\
+\hline
+\end{DoxyParams}
+\hypertarget{classaghMatrix_a6ac07da8c8a2340965f501a09ed5fcb4}{\index{agh\-Matrix@{agh\-Matrix}!set\-Items@{set\-Items}}
+\index{set\-Items@{set\-Items}!aghMatrix@{agh\-Matrix}}
+\subsubsection[{set\-Items}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class M $>$ void {\bf agh\-Matrix}$<$ M $>$\-::set\-Items (
+\begin{DoxyParamCaption}
+\item[{int}]{r, }
+\item[{int}]{c, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{classaghMatrix_a6ac07da8c8a2340965f501a09ed5fcb4}
+
+
+Metoda służąca do zmiany warości danej liczby elementów. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em r} & -\/ wiersze \mbox{[}rows\mbox{]} \\
+\hline
+{\em c} & -\/ kolumny \mbox{[}cols\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{aghMatrix_8h}{agh\-Matrix.\-h}\item 
+\hyperlink{aghMatrixImplem_8h}{agh\-Matrix\-Implem.\-h}\end{DoxyCompactItemize}
