@@ -13,14 +13,24 @@
 // ---------------------------------------------------------
 #include <iostream>
 #include <string>
+#include <stdlib.h>
+#include <time.h>
+#include <fstream>
+#include <math.h>
+
 
 
 using namespace std;
 
 #include "aghException.h"
-#include "generator.h"
-
-//komentarz
+#include "funkcje.h"
+#include "Generator.h"
+#include "Generator1.h"
+#include "Generator2.h"
+#include "Test.h"
+#include "Test1.h"
+#include "Test2.h"
+#include "Test3.h"
 
 
 
