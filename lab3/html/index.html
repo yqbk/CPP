@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>Generatory liczb losowych: Strona główna</title>
+<title>Generatory liczb losowych: Ćwiczenie 3: Dziedziczenie i polimorfizm</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Strony</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -74,13 +74,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Generatory liczb losowych Dokumentacja</div>  </div>
+<div class="title">Ćwiczenie 3: Dziedziczenie i polimorfizm </div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><p>Po co</p>
+<p>Ogólne doskonalenie posługiwania się C++. Zapoznanie się z mechanizmem dziedziczenia. Zapoznanie się z mechanizmem polimorfizmu w typach wbudowanych jak również typach tworzonych przez użytkownika. Definiowanie klas abstrakcyjnych i pochodnych. Definiowanie funkcji wirtualnych i czysto-wirtualnych. Zdobycie praktycznej umiejętności posługiwania się mechanizmem dziedziczenia. Doskonalenie umiejętności podziału kodu źródłowego na moduły i przeprowadzanie kompilacji rozdzielnej. Oddawanie ćwiczenia</p>
+<p>Ćwiczenie należy przesłać przez formularz, który jest dostępny tutaj. Program można skompilować z poziomu formularza. Przebieg ćwiczenia</p>
+<p>Celem ćwiczenia jest zaprojektowanie generatorów liczb pseudolosowych, oraz testów do sprawdzenia ich jakości. Główne założenia do wykonania ćwiczenia są następujące: Należy stworzyć co najmniej trzy różne generatory działające według różnych algorytmów. Należy stworzyć co najmniej trzy różne testy sprawdzania jakości napisanych generatorów. Należy tak zaprojektować hierarchie klas aby można było wykonać każdy rodzaj testu na każdym rodzaju generatora. Może to zostać osiągnięte poprzez stworzenie klas abstrakcyjnych reprezentujących obiekt generator i obiekt test, które będą używane do tworzenia klas potomnych właściwych obiektów typu generator i test. Należy także uwzględnić dalszą rozbudowę programu tj. umożliwić np. dopisanie osobom trzecim kolejnego rodzaju testu lub generatora bez ingerencji w już istniejące klasy. Każdą klasę należy zdefiniować w osobnym module! Po uruchomieniu, program powinien: przeprowadzić losowanie 10 przykładowych liczb przy pomocy każdego z generatorów i wypisać je na strumienie określone dalej w instrukcji, wykonać wszystkie testy dla każdego z generatorów i wypisać wyniki na strumienie określone dalej w instrukcji - każda klasa testująca pobiera odpowiednio dużą próbkę liczb pseudolosowych, zależną od charakteru testu. wykonać wszystkie operacje i się zakończyć. Program nie powinien oczekiwać żadnej akcji ze strony użytkownika. Generatory</p>
+<p>Jeden rodzaj generatora może wykorzystywać generator wbudowany w dany system lub środowisko, co będzie dobrym punktem odniesienia dla jakości pozostałych generatorów tworzonych od podstaw. Każdy generator losuje liczby całkowite z podanego zakresu (można użyć typu int). Każdy generator powinien posiadać metody umożliwiające zmianę wszystkich swoich parametrów: Ziarna losowania (dotyczy także generatora wbudowanego). Początku i końca przedziału losowania. Oraz innych wielkości specyficznych dla danego algorytmu losowania. Każdy generator powinien być wyposażony w jedną metodę wypisującą wylosowaną liczbę na podany jako parametr strumień. Jako domyślny strumień proszę ustawić ekran. Używając powyższej metody należy pokazać działanie polimorfizmu dla typu wbudowanego poprzez wypisanie wylosowanych wartości na ekran i do pliku. Testy</p>
+<p>Każdy test powinien posiadać następujące metody: Metoda ustawiająca generator jako parametr testu. Metoda uruchamiająca proces testowania. Metoda/y umożliwiające zmianę parametrów testowania. Metoda wypisywania rezultatu na strumień podany jako parametr. Jako domyślny strumień należy ustawić ekran. Używając powyższej metody należy pokazać działanie polimorfizmu dla typu wbudowanego poprzez wypisanie rezultatu na ekran i do pliku. Wyniki wszystkich testów dla wszystkich generatorów powinny być wypisane na ekran, jak również zapisanie w jednym pliku do którego strumień jest definiowany w funkcji main. </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Wygenerowano Pn, 26 maj 2014 01:43:19 dla Generatory liczb losowych programem &#160;<a href="http://www.doxygen.org/index.html">
+Wygenerowano Pn, 26 maj 2014 01:58:20 dla Generatory liczb losowych programem &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
