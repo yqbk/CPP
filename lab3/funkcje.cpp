@@ -1,6 +1,8 @@
 #include "aghInclude.h"
 
 
+// ---------------------------------------------------------
+// ---------------------------------------------------------
 int fib(int n) 
 {
     if(n == 0) return 0;
@@ -9,6 +11,7 @@ int fib(int n)
     return fib(n-1) + fib(n-2);
 }
 
+// ---------------------------------------------------------
 void prezentacjaGeneratora(Generator *wskGenerator)
 {
     ofstream plik;
@@ -31,6 +34,7 @@ void prezentacjaGeneratora(Generator *wskGenerator)
     }
 }
 
+// ---------------------------------------------------------
 void multiTesty(Generator *wskGenerator)
 {
     ofstream plik;
@@ -73,3 +77,6 @@ void multiTesty(Generator *wskGenerator)
    
     }
 }
+
+// ---------------------------------------------------------
+// ---------------------------------------------------------

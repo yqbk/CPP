@@ -1,8 +1,7 @@
 #include "aghInclude.h"
 
-	//Multiplikatywny LCG
-
-
+// ---------------------------------------------------------
+// ---------------------------------------------------------
 Generator2::Generator2(int iPoczatek, int iKoniec, unsigned long long seed, unsigned long long mnoznik, unsigned long long add, unsigned long long modul, string strNazwaGeneratora)
 {
     this->setPoczatek(iPoczatek);
@@ -12,12 +11,7 @@ Generator2::Generator2(int iPoczatek, int iKoniec, unsigned long long seed, unsi
     this->mnoznik = mnoznik;
     this->add = add;
     this->modul = modul;
-
-
-
-
-cout << endl << getSeed() << endl;    
-
+    this->x = getSeed(); 
 }
 
 
@@ -26,7 +20,7 @@ Generator2::~Generator2()
 
 }
 
-
+// ---------------------------------------------------------
 unsigned long long Generator2::LCG(unsigned long long mnoznik, unsigned long long  seed, unsigned long long modul)
 {
 
@@ -39,8 +33,8 @@ unsigned long long Generator2::LCG(unsigned long long mnoznik, unsigned long lon
     while (n <= 64)
     {
         if ((mnoznik & b) != 0)
-        r = (r + seed) % modul;
-        seed = (seed + seed) % modul;
+        r = (r + x) % modul;
+        x = (x + x) % modul;
         b *= 2;
         n++;
     }
@@ -48,10 +42,13 @@ unsigned long long Generator2::LCG(unsigned long long mnoznik, unsigned long lon
     return r;
 }
 
+
 void Generator2::losuj()
 {
-	setSeed((LCG(mnoznik, getSeed(), modul) + add) % modul);
+	x = (LCG(mnoznik, x, modul) + add) % modul;
 
-    this->iWylosowana = iPoczatek + (seed % (iKoniec - iPoczatek + 1));
+    this->iWylosowana = iPoczatek + (x % (iKoniec - iPoczatek + 1));
 }
 
+// ---------------------------------------------------------
+// ---------------------------------------------------------

@@ -1,6 +1,7 @@
-#include "aghInclude.h"       //Pi test
+#include "aghInclude.h"
 
-
+// ---------------------------------------------------------
+// ---------------------------------------------------------
 Test4::Test4(string strNazwaTestu, Generator* wskGenerator, int iIloscLosowan) : Test(strNazwaTestu, wskGenerator, iIloscLosowan)
 {
     if(wynikiFib != NULL) 
@@ -15,7 +16,7 @@ Test4::Test4(string strNazwaTestu, Generator* wskGenerator, int iIloscLosowan) :
    }
 }
 
-
+// ---------------------------------------------------------
 Test4::~Test4() 
 {
    if(wynikiFib != NULL)
@@ -24,7 +25,7 @@ Test4::~Test4()
    wynikiFib = NULL;
 }
 
-
+// ---------------------------------------------------------
 void Test4::testuj() 
 {
    int r = wskGenerator->getKoniec() - wskGenerator->getPoczatek() + 1;
@@ -58,7 +59,7 @@ void Test4::testuj()
    }
 }
 
-
+// ---------------------------------------------------------
 void Test4::print(ostream & output) 
 {
    output << "\nTest Pi: \n";
@@ -66,3 +67,6 @@ void Test4::print(ostream & output)
    for (int i = 0; i < iIloscLosowan; ++i)   
       output << " " << wynikiFib[i] << " " ; 
 }
+
+// ---------------------------------------------------------
+// ---------------------------------------------------------

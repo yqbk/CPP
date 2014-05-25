@@ -1,6 +1,7 @@
 #include "aghInclude.h"
 
-
+// ---------------------------------------------------------
+// ---------------------------------------------------------
 Test3::Test3(string strNazwaTestu, Generator *wskGenerator, int iIloscLosowan) : Test(strNazwaTestu, wskGenerator, iIloscLosowan)
 {
     powtorzenia = new int*[iIloscLosowan];
@@ -13,13 +14,13 @@ Test3::Test3(string strNazwaTestu, Generator *wskGenerator, int iIloscLosowan) :
     }
 }
 
-
+// ---------------------------------------------------------
 Test3::~Test3()
 {
 
 }
 
-
+// ---------------------------------------------------------
 void Test3::testuj()
 {
     for (int i = 0; i < this->iIloscLosowan; i++)
@@ -50,7 +51,7 @@ void Test3::testuj()
     }
 }
 
-
+// ---------------------------------------------------------
 void Test3::print(ostream & output) 
 {
    output << "\nTest najwiekszej liczby powtorzen: \n";
@@ -59,3 +60,6 @@ void Test3::print(ostream & output)
 
    output << "\n\n" << "Najwiecej razy powtorzyla sie liczba: " << wyniki[index] << ", " << max << " razy." << endl; 
 }
+
+// ---------------------------------------------------------
+// ---------------------------------------------------------

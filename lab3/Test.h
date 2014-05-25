@@ -40,9 +40,8 @@ class Test
        * @param strNazwaTestu - nazwa testu
        * @param Generator* - wskaznik na generator
        * @param iIloscLosowan - Ilosc liczb do wylosowania
-       * @return No value returns
        */
-        Test(string strNazwaTestu, Generator*, int iIloscLosowan);
+        Test(string strNazwaTestu, Generator* , int iIloscLosowan);
 
        /**
        * @brief Dekonstruktor
@@ -138,13 +137,14 @@ class Test
 
 
        /**
-       * @brief Metoda wirtualna wypisujaca wylosowane liczby do strumienia
+       * @brief Metoda wypisujaca wyniki do strumienia
        * @return Nic nie zwraca
        */
         virtual void print(ostream & = cout);
         
 
 };
+
 // ---------------------------------------------------------  
 // ---------------------------------------------------------  
 #endif 

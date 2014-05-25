@@ -22,13 +22,11 @@ class Generator
 {
     protected:
 
-        int iPoczatek;              //Poczatek przedzialu
-        int iKoniec;                //Koniec przedzialu
-        int seed;                   //Ziarno
-        string strNazwaGeneratora;  //Nazwa generatora
-        int iWylosowana;            //Wylosowana liczba
-
-        //int size;
+        int iPoczatek;              ///Poczatek przedzialu
+        int iKoniec;                ///Koniec przedzialu
+        int seed;                   ///Ziarno
+        string strNazwaGeneratora;  ///Nazwa generatora
+        int iWylosowana;            ///Wylosowana liczba
 
 
     public:
@@ -44,7 +42,6 @@ class Generator
        * @param iKoniec - koniec przedzialu
        * @param seed - ziarno (warosc poczatkowa)
        * @param strNazwaGeneratora - nazwa generatora
-       * @return No value returns
        */
         Generator(int iPoczatek, int iKoniec, int seed, string strNazwaGeneratora);
 
@@ -137,6 +134,7 @@ class Generator
 
 
 };
+
 // ---------------------------------------------------------
 // ---------------------------------------------------------
 #endif

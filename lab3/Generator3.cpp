@@ -1,8 +1,11 @@
 #include "aghInclude.h"
 
-
+// ---------------------------------------------------------
+// ---------------------------------------------------------
 int Generator3::i = 0;
 
+
+// ---------------------------------------------------------
 Generator3::Generator3() : Generator(0,1,0, "Generator Fibonacciego") 
 {
    size = 0;
@@ -10,12 +13,14 @@ Generator3::Generator3() : Generator(0,1,0, "Generator Fibonacciego")
    state = NULL;
 }
 
+
 Generator3::Generator3(int iPoczatek, int iKoniec, int _size, int _step, int _seed, string strNazwa) 
 {  
    state = NULL;
    resetGenerator(iPoczatek, iKoniec, _size, _step, _seed);
    setNazwa("Generator Fibonacciego");
 }
+
 
 Generator3::~Generator3() 
 {
@@ -25,6 +30,8 @@ Generator3::~Generator3()
    state = NULL;
 }
 
+
+// ---------------------------------------------------------
 void Generator3::initializeGenerator() 
 {
    if(size <= 1)
@@ -44,6 +51,27 @@ void Generator3::initializeGenerator()
    }
 }
 
+
+void Generator3::resetGenerator(int iPoczatek, int iKoniec, int _size, int _step, int _seed) 
+{ 
+   if(_step >= _size)
+      throw aghException(0, "Wrong values given", __FILE__, __LINE__);
+   
+   else 
+   {
+      setSize(_size);
+      setStep(_step);
+
+      setPoczatek(iPoczatek);
+      setKoniec(iKoniec);
+
+      setSeed(_seed);
+      initializeGenerator();
+   }
+   
+}
+
+
 void Generator3::losuj() 
 {
    state[i] = ((state[(size + i - step) % size] ^ state[i]) % (getKoniec() - getPoczatek() + 1) ) + iPoczatek;
@@ -51,10 +79,13 @@ void Generator3::losuj()
    i = (i + 1) % size;
 }
 
+
+// ---------------------------------------------------------
 int Generator3::getSize()  
 {
    return size;
 }
+
 
 void Generator3::setSize(int _size) 
 {
@@ -69,12 +100,14 @@ void Generator3::setSize(int _size)
 
 }
 
+
 int Generator3::getStep()  
 {
    return step;
 }
 
 
+// ---------------------------------------------------------
 void Generator3::setStep(int _step) 
 {
    if(_step <= 0 || _step > size) 
@@ -84,6 +117,7 @@ void Generator3::setStep(int _step)
       step = _step;     
   
 }
+
 
 void Generator3::setSeed(int _seed) 
 {
@@ -98,22 +132,6 @@ void Generator3::setSeed(int _seed)
    }
 }
 
-void Generator3::resetGenerator(int iPoczatek, int iKoniec, int _size, int _step, int _seed) 
-{ 
-   if(_step >= _size)
-      throw aghException(0, "Wrong values given", __FILE__, __LINE__);
-   
-   else 
-   {
-      setSize(_size);
-      setStep(_step);
 
-      //setRange(_beg, iKoniec);
-      setPoczatek(iPoczatek);
-      setKoniec(iKoniec);
-
-      setSeed(_seed);
-      initializeGenerator();
-   }
-   
-}
+// ---------------------------------------------------------
+// ---------------------------------------------------------

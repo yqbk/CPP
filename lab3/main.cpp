@@ -1,7 +1,8 @@
 #include "aghInclude.h"
 
 
-
+//------------------------------------------------------
+//------------------------------------------------------
 int main()
 {
 
@@ -9,17 +10,14 @@ int main()
     plik.open("plik.txt", ios::trunc | ios::out);
 
     if( plik.good() == true )
-    {
+    {    	
 
-    	
-/*
 //------------------------------------------------------
     	Generator1 generator1(1, 100, 1, "Generator rand()");    
 
     	prezentacjaGeneratora(& generator1);
 
     	multiTesty(& generator1);
-    	*/
 //------------------------------------------------------
     	Generator2 generator2(1, 100, time(NULL), 69069, 0, pow(2, 32), "Generator Multiplikatywny LCG");  //Super-Duper   
 
@@ -27,13 +25,11 @@ int main()
 
     	multiTesty(& generator2);
 //------------------------------------------------------
-    	/*
     	Generator3 generator3(0, 100, 127, 97, time(NULL), "Generator Fibonacciego");   
 
     	prezentacjaGeneratora(& generator3);
 
     	multiTesty(& generator3);
-    	*/
 //------------------------------------------------------
 
     	plik.close();
@@ -45,3 +41,6 @@ int main()
 
     return 0;
 }
+
+//------------------------------------------------------
+//------------------------------------------------------
