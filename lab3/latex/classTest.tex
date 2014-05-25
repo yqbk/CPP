@@ -1,0 +1,317 @@
+\hypertarget{classTest}{\section{Dokumentacja klasy Test}
+\label{classTest}\index{Test@{Test}}
+}
+
+
+Klasa abstrakcyjna Testu.  
+
+
+
+
+{\ttfamily \#include $<$Test.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Test
+
+
+Diagram współpracy dla Test\+:
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTest_a99f2bbfac6c95612322b0f10e607ebe5}{\hyperlink{classTest_a99f2bbfac6c95612322b0f10e607ebe5}{Test} ()}\label{classTest_a99f2bbfac6c95612322b0f10e607ebe5}
+
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\hyperlink{classTest_a14b20306f1446ab9c1b9310529a5406b}{Test} (string str\+Nazwa\+Testu, \hyperlink{classGenerator}{Generator} $\ast$, int i\+Ilosc\+Losowan)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametrowy. \end{DoxyCompactList}\item 
+\hypertarget{classTest_a2b0a62f1e667bbe8d8cb18d785bfa991}{virtual \hyperlink{classTest_a2b0a62f1e667bbe8d8cb18d785bfa991}{$\sim$\+Test} ()}\label{classTest_a2b0a62f1e667bbe8d8cb18d785bfa991}
+
+\begin{DoxyCompactList}\small\item\em Dekonstruktor. \end{DoxyCompactList}\item 
+void \hyperlink{classTest_a9e1d30aac3228c9bd71b8d1035f84b18}{resize} ()
+\begin{DoxyCompactList}\small\item\em Metoda zmianiajaca rozmiar / tworzaca tablice wynikow. \end{DoxyCompactList}\item 
+void \hyperlink{classTest_a25872f3ab197f8be59463b3e3bf98a42}{clear} ()
+\begin{DoxyCompactList}\small\item\em Metoda kasujaca tablice wynikow. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classTest_a3c91567feb37106c314c03b9cceb3527}{testuj} ()=0
+\begin{DoxyCompactList}\small\item\em Metoda wirtualna do testowania generatora. \end{DoxyCompactList}\item 
+void \hyperlink{classTest_adab32b84de0a057a71f6a3fe14ed16bd}{set\+Generator} (\hyperlink{classGenerator}{Generator} $\ast$)
+\begin{DoxyCompactList}\small\item\em Metoda ustawiajaca wskaznik. \end{DoxyCompactList}\item 
+void \hyperlink{classTest_af3ef37c59875a1d95d6ba65e66fdce4b}{set\+Ilosc\+Losowan} (int i\+Ilosc\+Losowan)
+\begin{DoxyCompactList}\small\item\em Metoda ustawiajaca ilosc losowan. \end{DoxyCompactList}\item 
+void \hyperlink{classTest_a20b10cc4940235337f3e1a5189aef625}{set\+Nazwa} (string str\+Nazwa\+Testu)
+\begin{DoxyCompactList}\small\item\em Metoda ustawiajaca nazwe testu. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classTest_a913ca9be6a22e4f559d4864f65f418b9}{set\+Wyniki} (int n, int value)
+\begin{DoxyCompactList}\small\item\em Metoda ustawiajaca wynik o danym indeksie -\/ wirtualna. \end{DoxyCompactList}\item 
+int \hyperlink{classTest_aa563c2edebfd3d1888ea9b2767dcee41}{get\+Wyniki} (int n)
+\begin{DoxyCompactList}\small\item\em Metoda pobierajaca wartosc wyniku o indeksie n. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classTest_a30725cdceb028622bc8b87f32d0f97e1}{get\+Ilosc\+Losowan} ()
+\begin{DoxyCompactList}\small\item\em Metoda pobierajaca ilosc losowan -\/ wirtualna. \end{DoxyCompactList}\item 
+string \hyperlink{classTest_adb298c1a81aff468653419d96ecf7a88}{get\+Nazwa} ()
+\begin{DoxyCompactList}\small\item\em Metoda pobierajaca nazwe testu. \end{DoxyCompactList}\item 
+\hyperlink{classGenerator}{Generator} $\ast$ \hyperlink{classTest_acb5c11856190eff9b99ea410f0f56827}{get\+Generator} ()
+\begin{DoxyCompactList}\small\item\em Metoda pobierajaca wskaznik na generator. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classTest_a0563ec3fa6bd91dcd0bcd086fba8b5cf}{print} (ostream \&=cout)
+\begin{DoxyCompactList}\small\item\em Metoda wypisujaca wyniki do strumienia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTest_a93fe3ba80fd4b0a15c8fb4ad1951a5db}{string {\bfseries str\+Nazwa\+Testu}}\label{classTest_a93fe3ba80fd4b0a15c8fb4ad1951a5db}
+
+\item 
+\hypertarget{classTest_a53ed0d149ca8e049d1c8f39fd6d08288}{int {\bfseries i\+Ilosc\+Losowan}}\label{classTest_a53ed0d149ca8e049d1c8f39fd6d08288}
+
+\item 
+\hypertarget{classTest_a7fdc180c2758ed50e0162aceb8afdb22}{int $\ast$ {\bfseries wyniki}}\label{classTest_a7fdc180c2758ed50e0162aceb8afdb22}
+
+\item 
+\hypertarget{classTest_a64c5ebc3d1127c0206fb7f06a708d1e3}{\hyperlink{classGenerator}{Generator} $\ast$ {\bfseries wsk\+Generator}}\label{classTest_a64c5ebc3d1127c0206fb7f06a708d1e3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa abstrakcyjna Testu. 
+
+\begin{DoxyAuthor}{Autorzy}
+Jakub Syrek \& Katarzyna Żukowska 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+25.\+05.\+2014 
+\end{DoxyDate}
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classTest_a14b20306f1446ab9c1b9310529a5406b}{\index{Test@{Test}!Test@{Test}}
+\index{Test@{Test}!Test@{Test}}
+\subsubsection[{Test}]{\setlength{\rightskip}{0pt plus 5cm}Test\+::\+Test (
+\begin{DoxyParamCaption}
+\item[{string}]{str\+Nazwa\+Testu, }
+\item[{{\bf Generator} $\ast$}]{wsk\+Generator, }
+\item[{int}]{i\+Ilosc\+Losowan}
+\end{DoxyParamCaption}
+)}}\label{classTest_a14b20306f1446ab9c1b9310529a5406b}
+
+
+Konstruktor parametrowy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em str\+Nazwa\+Testu} & -\/ nazwa testu \\
+\hline
+{\em Generator$\ast$} & -\/ wskaznik na generator \\
+\hline
+{\em i\+Ilosc\+Losowan} & -\/ Ilosc liczb do wylosowania \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classTest_a25872f3ab197f8be59463b3e3bf98a42}{\index{Test@{Test}!clear@{clear}}
+\index{clear@{clear}!Test@{Test}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classTest_a25872f3ab197f8be59463b3e3bf98a42}
+
+
+Metoda kasujaca tablice wynikow. 
+
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+\hypertarget{classTest_acb5c11856190eff9b99ea410f0f56827}{\index{Test@{Test}!get\+Generator@{get\+Generator}}
+\index{get\+Generator@{get\+Generator}!Test@{Test}}
+\subsubsection[{get\+Generator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Generator} $\ast$ Test\+::get\+Generator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classTest_acb5c11856190eff9b99ea410f0f56827}
+
+
+Metoda pobierajaca wskaznik na generator. 
+
+\begin{DoxyReturn}{Zwraca}
+Wskaznik na generator 
+\end{DoxyReturn}
+\hypertarget{classTest_a30725cdceb028622bc8b87f32d0f97e1}{\index{Test@{Test}!get\+Ilosc\+Losowan@{get\+Ilosc\+Losowan}}
+\index{get\+Ilosc\+Losowan@{get\+Ilosc\+Losowan}!Test@{Test}}
+\subsubsection[{get\+Ilosc\+Losowan}]{\setlength{\rightskip}{0pt plus 5cm}int Test\+::get\+Ilosc\+Losowan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classTest_a30725cdceb028622bc8b87f32d0f97e1}
+
+
+Metoda pobierajaca ilosc losowan -\/ wirtualna. 
+
+\begin{DoxyReturn}{Zwraca}
+Ilosc losowan 
+\end{DoxyReturn}
+\hypertarget{classTest_adb298c1a81aff468653419d96ecf7a88}{\index{Test@{Test}!get\+Nazwa@{get\+Nazwa}}
+\index{get\+Nazwa@{get\+Nazwa}!Test@{Test}}
+\subsubsection[{get\+Nazwa}]{\setlength{\rightskip}{0pt plus 5cm}string Test\+::get\+Nazwa (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classTest_adb298c1a81aff468653419d96ecf7a88}
+
+
+Metoda pobierajaca nazwe testu. 
+
+\begin{DoxyReturn}{Zwraca}
+Nazwa testu 
+\end{DoxyReturn}
+\hypertarget{classTest_aa563c2edebfd3d1888ea9b2767dcee41}{\index{Test@{Test}!get\+Wyniki@{get\+Wyniki}}
+\index{get\+Wyniki@{get\+Wyniki}!Test@{Test}}
+\subsubsection[{get\+Wyniki}]{\setlength{\rightskip}{0pt plus 5cm}int Test\+::get\+Wyniki (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{classTest_aa563c2edebfd3d1888ea9b2767dcee41}
+
+
+Metoda pobierajaca wartosc wyniku o indeksie n. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em n} & -\/ nr indeksu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Poczatek przedzialu 
+\end{DoxyReturn}
+\hypertarget{classTest_a0563ec3fa6bd91dcd0bcd086fba8b5cf}{\index{Test@{Test}!print@{print}}
+\index{print@{print}!Test@{Test}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+::print (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{output = {\ttfamily cout}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classTest_a0563ec3fa6bd91dcd0bcd086fba8b5cf}
+
+
+Metoda wypisujaca wyniki do strumienia. 
+
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+
+
+Reimplementowana w \hyperlink{classTest3_a58da51d98cae0cfe7a71c7d8ba0b635c}{Test3}, \hyperlink{classTest1_a198852a2e43bcba7c3060b80ff77e9a5}{Test1}, \hyperlink{classTest2_a084ed28b1f5a8e24abe7319c80292b99}{Test2} i \hyperlink{classTest4_a6348ddd41298c951da973c488bfe62d9}{Test4}.
+
+\hypertarget{classTest_a9e1d30aac3228c9bd71b8d1035f84b18}{\index{Test@{Test}!resize@{resize}}
+\index{resize@{resize}!Test@{Test}}
+\subsubsection[{resize}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+::resize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classTest_a9e1d30aac3228c9bd71b8d1035f84b18}
+
+
+Metoda zmianiajaca rozmiar / tworzaca tablice wynikow. 
+
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+\hypertarget{classTest_adab32b84de0a057a71f6a3fe14ed16bd}{\index{Test@{Test}!set\+Generator@{set\+Generator}}
+\index{set\+Generator@{set\+Generator}!Test@{Test}}
+\subsubsection[{set\+Generator}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+::set\+Generator (
+\begin{DoxyParamCaption}
+\item[{{\bf Generator} $\ast$}]{generator}
+\end{DoxyParamCaption}
+)}}\label{classTest_adab32b84de0a057a71f6a3fe14ed16bd}
+
+
+Metoda ustawiajaca wskaznik. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em Generator$\ast$} & -\/ wskaznik na generator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+\hypertarget{classTest_af3ef37c59875a1d95d6ba65e66fdce4b}{\index{Test@{Test}!set\+Ilosc\+Losowan@{set\+Ilosc\+Losowan}}
+\index{set\+Ilosc\+Losowan@{set\+Ilosc\+Losowan}!Test@{Test}}
+\subsubsection[{set\+Ilosc\+Losowan}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+::set\+Ilosc\+Losowan (
+\begin{DoxyParamCaption}
+\item[{int}]{i\+Ilosc\+Losowan}
+\end{DoxyParamCaption}
+)}}\label{classTest_af3ef37c59875a1d95d6ba65e66fdce4b}
+
+
+Metoda ustawiajaca ilosc losowan. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em i\+Ilosc\+Losowan} & -\/ ilosc losowan \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+\hypertarget{classTest_a20b10cc4940235337f3e1a5189aef625}{\index{Test@{Test}!set\+Nazwa@{set\+Nazwa}}
+\index{set\+Nazwa@{set\+Nazwa}!Test@{Test}}
+\subsubsection[{set\+Nazwa}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+::set\+Nazwa (
+\begin{DoxyParamCaption}
+\item[{string}]{str\+Nazwa\+Testu}
+\end{DoxyParamCaption}
+)}}\label{classTest_a20b10cc4940235337f3e1a5189aef625}
+
+
+Metoda ustawiajaca nazwe testu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em str\+Nazwa\+Testu} & -\/ nazwa testu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+\hypertarget{classTest_a913ca9be6a22e4f559d4864f65f418b9}{\index{Test@{Test}!set\+Wyniki@{set\+Wyniki}}
+\index{set\+Wyniki@{set\+Wyniki}!Test@{Test}}
+\subsubsection[{set\+Wyniki}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+::set\+Wyniki (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classTest_a913ca9be6a22e4f559d4864f65f418b9}
+
+
+Metoda ustawiajaca wynik o danym indeksie -\/ wirtualna. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em n} & -\/ nr indeksu \\
+\hline
+{\em value} & -\/ wartosc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+\hypertarget{classTest_a3c91567feb37106c314c03b9cceb3527}{\index{Test@{Test}!testuj@{testuj}}
+\index{testuj@{testuj}!Test@{Test}}
+\subsubsection[{testuj}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Test\+::testuj (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classTest_a3c91567feb37106c314c03b9cceb3527}
+
+
+Metoda wirtualna do testowania generatora. 
+
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+
+
+Implementowany w \hyperlink{classTest3_a37353515f46cf40f350871a17a3bc134}{Test3}, \hyperlink{classTest1_a0198013eddf3e1dd1f0b162343d11297}{Test1}, \hyperlink{classTest2_ae49f0c6f2451d611f417f43717ebd446}{Test2} i \hyperlink{classTest4_a562e91a4d320fbe72cbce84285775e0e}{Test4}.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Test_8h}{Test.\+h}\item 
+Test.\+cpp\end{DoxyCompactItemize}

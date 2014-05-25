@@ -1,0 +1,61 @@
+\hypertarget{aghException_8h}{\section{Dokumentacja pliku agh\+Exception.\+h}
+\label{aghException_8h}\index{agh\+Exception.\+h@{agh\+Exception.\+h}}
+}
+
+
+The definition of \hyperlink{classaghException}{agh\+Exception} class that allows for exception handling.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+Wykres zależności załączania dla agh\+Exception.\+h\+:
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:
+\subsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classaghException}{agh\+Exception}
+\begin{DoxyCompactList}\small\item\em The definition of \hyperlink{classaghException}{agh\+Exception} class that allows for exception handling. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{aghException_8h_a10c70066bf9a72136e183f7fe9ecc9ea}{operator$<$$<$} (ostream \&\+\_\+\+\_\+out, \hyperlink{classaghException}{agh\+Exception} \&\+\_\+\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em an overloaded operator $<$$<$ that writes the error parameters to the given stream \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+The definition of \hyperlink{classaghException}{agh\+Exception} class that allows for exception handling. 
+
+\begin{DoxyAuthor}{Autor}
+Krzysztof Kaczor 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+15.\+04.\+2011 
+\end{DoxyDate}
+\begin{DoxyVersion}{Wersja}
+1.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Dokumentacja funkcji}
+\hypertarget{aghException_8h_a10c70066bf9a72136e183f7fe9ecc9ea}{\index{agh\+Exception.\+h@{agh\+Exception.\+h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!agh\+Exception.\+h@{agh\+Exception.\+h}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{\+\_\+\+\_\+out, }
+\item[{{\bf agh\+Exception} \&}]{\+\_\+\+\_\+exception}
+\end{DoxyParamCaption}
+)}}\label{aghException_8h_a10c70066bf9a72136e183f7fe9ecc9ea}
+
+
+an overloaded operator $<$$<$ that writes the error parameters to the given stream 
+
+
+\begin{DoxyParams}{Parametry}
+{\em \+\_\+\+\_\+out} & -\/ a given stream (display, file, etc.) \\
+\hline
+{\em \+\_\+\+\_\+exception} & -\/ a reference to the exception object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+returns a reference to the given stream 
+\end{DoxyReturn}

@@ -1,0 +1,139 @@
+\hypertarget{classGenerator2}{\section{Dokumentacja klasy Generator2}
+\label{classGenerator2}\index{Generator2@{Generator2}}
+}
+
+
+Klasa generatora Multiplikatywnego L\+C\+G.  
+
+
+
+
+{\ttfamily \#include $<$Generator2.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Generator2
+
+
+Diagram współpracy dla Generator2\+:
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGenerator2_a3dfa71293f5dd70d1cf3a30d7676d043}{Generator2} (int i\+Poczatek, int \hyperlink{classGenerator_a235b3d02ce62d19e803cc2295eb7911e}{i\+Koniec}, unsigned long long \hyperlink{classGenerator_ae77446ccb4946b8eb28d0f20f3e4a95f}{seed}, unsigned long long mnoznik, unsigned long long add, unsigned long long modul, string \hyperlink{classGenerator_a7e2c131c26baf31bb3f072115c619d1c}{str\+Nazwa\+Generatora})
+\begin{DoxyCompactList}\small\item\em liczba ktora dodajemy \end{DoxyCompactList}\item 
+unsigned long long \hyperlink{classGenerator2_a4df292bb376f2ff9ea44721fda384c0a}{L\+C\+G} (unsigned long long mnoznik, unsigned long long \hyperlink{classGenerator_ae77446ccb4946b8eb28d0f20f3e4a95f}{seed}, unsigned long long modul)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametrowy. \end{DoxyCompactList}\item 
+\hypertarget{classGenerator2_a44a1eb78b1e847318969b476dc22746d}{\hyperlink{classGenerator2_a44a1eb78b1e847318969b476dc22746d}{$\sim$\+Generator2} ()}\label{classGenerator2_a44a1eb78b1e847318969b476dc22746d}
+
+\begin{DoxyCompactList}\small\item\em Dekonstruktor. \end{DoxyCompactList}\item 
+void \hyperlink{classGenerator2_a96705c3ab595c06470c3bbb0c24881b0}{losuj} ()
+\begin{DoxyCompactList}\small\item\em Metoda losujaca liczby. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\subsection{Opis szczegółowy}
+Klasa generatora Multiplikatywnego L\+C\+G. 
+
+\begin{DoxyAuthor}{Autorzy}
+Jakub Syrek \& Katarzyna Żukowska 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+25.\+05.\+2014 
+\end{DoxyDate}
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classGenerator2_a3dfa71293f5dd70d1cf3a30d7676d043}{\index{Generator2@{Generator2}!Generator2@{Generator2}}
+\index{Generator2@{Generator2}!Generator2@{Generator2}}
+\subsubsection[{Generator2}]{\setlength{\rightskip}{0pt plus 5cm}Generator2\+::\+Generator2 (
+\begin{DoxyParamCaption}
+\item[{int}]{i\+Poczatek, }
+\item[{int}]{i\+Koniec, }
+\item[{unsigned long long}]{seed, }
+\item[{unsigned long long}]{mnoznik, }
+\item[{unsigned long long}]{add, }
+\item[{unsigned long long}]{modul, }
+\item[{string}]{str\+Nazwa\+Generatora}
+\end{DoxyParamCaption}
+)}}\label{classGenerator2_a3dfa71293f5dd70d1cf3a30d7676d043}
+
+
+liczba ktora dodajemy 
+
+Konstruktor parametrowy 
+\begin{DoxyParams}{Parametry}
+{\em i\+Poczatek} & -\/ poczatek przedzialu \\
+\hline
+{\em i\+Koniec} & -\/ koniec przedzialu \\
+\hline
+{\em seed} & -\/ ziarno (wartosc poczatkowa) \\
+\hline
+{\em mnoznik} & -\/ mnoznik przez ktory mnozymy \\
+\hline
+{\em add} & -\/ liczba ktora dodajemy \\
+\hline
+{\em modul} & -\/ modul z liczby \\
+\hline
+{\em str\+Nazwa\+Generatora} & -\/ nazwa generatora \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classGenerator2_a4df292bb376f2ff9ea44721fda384c0a}{\index{Generator2@{Generator2}!L\+C\+G@{L\+C\+G}}
+\index{L\+C\+G@{L\+C\+G}!Generator2@{Generator2}}
+\subsubsection[{L\+C\+G}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long long Generator2\+::\+L\+C\+G (
+\begin{DoxyParamCaption}
+\item[{unsigned long long}]{mnoznik, }
+\item[{unsigned long long}]{seed, }
+\item[{unsigned long long}]{modul}
+\end{DoxyParamCaption}
+)}}\label{classGenerator2_a4df292bb376f2ff9ea44721fda384c0a}
+
+
+Konstruktor parametrowy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em i\+Poczatek} & -\/ poczatek przedzialu \\
+\hline
+{\em i\+Koniec} & -\/ koniec przedzialu \\
+\hline
+{\em seed} & -\/ ziarno (wartosc poczatkowa) \\
+\hline
+{\em mnoznik} & -\/ mnoznik przez ktory mnozymy \\
+\hline
+{\em add} & -\/ liczba ktora dodajemy \\
+\hline
+{\em modul} & -\/ modul z liczby \\
+\hline
+{\em str\+Nazwa\+Generatora} & -\/ nazwa generatora \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca wylosowana liczbe (bez przedzialow) 
+\end{DoxyReturn}
+\hypertarget{classGenerator2_a96705c3ab595c06470c3bbb0c24881b0}{\index{Generator2@{Generator2}!losuj@{losuj}}
+\index{losuj@{losuj}!Generator2@{Generator2}}
+\subsubsection[{losuj}]{\setlength{\rightskip}{0pt plus 5cm}void Generator2\+::losuj (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classGenerator2_a96705c3ab595c06470c3bbb0c24881b0}
+
+
+Metoda losujaca liczby. 
+
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+
+
+Implementuje \hyperlink{classGenerator_ace6b7b9d7b8afcf8a980277dee90d04b}{Generator}.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Generator2_8h}{Generator2.\+h}\item 
+Generator2.\+cpp\end{DoxyCompactItemize}

@@ -10,63 +10,63 @@ Generator3::Generator3() : Generator(0,1,0, "Generator Fibonacciego")
 {
    size = 0;
    step = 0;
-   state = NULL;
+   wynikiGen = NULL;
 }
 
 
-Generator3::Generator3(int iPoczatek, int iKoniec, int _size, int _step, int _seed, string strNazwa) 
+Generator3::Generator3(int iPoczatek, int iKoniec, int size, int step, int seed, string strNazwa) 
 {  
-   state = NULL;
-   resetGenerator(iPoczatek, iKoniec, _size, _step, _seed);
+   wynikiGen = NULL;
+   resetGenerator(iPoczatek, iKoniec, size, step, seed);
    setNazwa("Generator Fibonacciego");
 }
 
 
 Generator3::~Generator3() 
 {
-   if(state != NULL)
-      delete[] state;
+   if(wynikiGen != NULL)
+      delete[] wynikiGen;
 
-   state = NULL;
+   wynikiGen = NULL;
 }
 
 
 // ---------------------------------------------------------
-void Generator3::initializeGenerator() 
+void Generator3::setGenerator() 
 {
    if(size <= 1)
-      throw aghException(0, "Wrong values given", __FILE__, __LINE__);
+      throw aghException(0, "Niepoprawne dane wejscowe", __FILE__, __LINE__);
    
    else 
    {
-      if(state != NULL)
-         delete[] state;
+      if(wynikiGen != NULL)
+         delete[] wynikiGen;
 
-      state = new int[size];
+      wynikiGen = new int[size];
 
       srand(seed);
 
       for(int i = 0; i < size; i++)
-         state[i] = rand() % (getKoniec() - getPoczatek() + 1) + iPoczatek;
+         wynikiGen[i] = rand() % (getKoniec() - getPoczatek() + 1) + iPoczatek;
    }
 }
 
 
-void Generator3::resetGenerator(int iPoczatek, int iKoniec, int _size, int _step, int _seed) 
+void Generator3::resetGenerator(int iPoczatek, int iKoniec, int size, int step, int seed) 
 { 
-   if(_step >= _size)
-      throw aghException(0, "Wrong values given", __FILE__, __LINE__);
+   if(step >= size)
+      throw aghException(0, "Niepoprawne dane wejscowe", __FILE__, __LINE__);
    
    else 
    {
-      setSize(_size);
-      setStep(_step);
+      setSize(size);
+      setStep(step);
 
       setPoczatek(iPoczatek);
       setKoniec(iKoniec);
 
-      setSeed(_seed);
-      initializeGenerator();
+      setSeed(seed);
+      setGenerator();
    }
    
 }
@@ -74,8 +74,8 @@ void Generator3::resetGenerator(int iPoczatek, int iKoniec, int _size, int _step
 
 void Generator3::losuj() 
 {
-   state[i] = ((state[(size + i - step) % size] ^ state[i]) % (getKoniec() - getPoczatek() + 1) ) + iPoczatek;
-   iWylosowana = state[i];
+   wynikiGen[i] = ((wynikiGen[(size + i - step) % size] ^ wynikiGen[i]) % (getKoniec() - getPoczatek() + 1) ) + iPoczatek;
+   iWylosowana = wynikiGen[i];
    i = (i + 1) % size;
 }
 
@@ -87,15 +87,15 @@ int Generator3::getSize()
 }
 
 
-void Generator3::setSize(int _size) 
+void Generator3::setSize(int size) 
 {
-   if(_size <= 1) 
-      throw aghException(0, "Wrong values given", __FILE__, __LINE__);
+   if(size <= 1) 
+      throw aghException(0, "Niepoprawne dane wejscowe", __FILE__, __LINE__);
 
    else 
    {
-      size = _size;
-      initializeGenerator();     
+      size = size;
+      setGenerator();     
    }
 
 }
@@ -108,26 +108,26 @@ int Generator3::getStep()
 
 
 // ---------------------------------------------------------
-void Generator3::setStep(int _step) 
+void Generator3::setStep(int step) 
 {
-   if(_step <= 0 || _step > size) 
-      throw aghException(0, "Wrong values given", __FILE__, __LINE__);
+   if(step <= 0 || step > size) 
+      throw aghException(0, "Niepoprawne dane wejscowe", __FILE__, __LINE__);
    
    else 
-      step = _step;     
+      step = step;     
   
 }
 
 
-void Generator3::setSeed(int _seed) 
+void Generator3::setSeed(int seed) 
 {
-   if(_seed < 0)
-      throw aghException(0, "Wrong values given", __FILE__, __LINE__);
+   if(seed < 0)
+      throw aghException(0, "Niepoprawne dane wejscowe", __FILE__, __LINE__);
    
    else 
    {
-      seed = _seed;
-      initializeGenerator();
+      seed = seed;
+      setGenerator();
       
    }
 }

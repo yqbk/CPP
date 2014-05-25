@@ -1,0 +1,318 @@
+\hypertarget{classGenerator}{\section{Dokumentacja klasy Generator}
+\label{classGenerator}\index{Generator@{Generator}}
+}
+
+
+Klasa abstrakcyjna generatora.  
+
+
+
+
+{\ttfamily \#include $<$Generator.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Generator
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGenerator_aaaf1e5f3a47ede3ef8a96a301ee04a10}{Generator} ()
+\begin{DoxyCompactList}\small\item\em Wylosowana liczba. \end{DoxyCompactList}\item 
+\hyperlink{classGenerator_aae31ea3cea1d9b3770b74965b843fcfc}{Generator} (int i\+Poczatek, int \hyperlink{classGenerator_a235b3d02ce62d19e803cc2295eb7911e}{i\+Koniec}, int \hyperlink{classGenerator_ae77446ccb4946b8eb28d0f20f3e4a95f}{seed}, string \hyperlink{classGenerator_a7e2c131c26baf31bb3f072115c619d1c}{str\+Nazwa\+Generatora})
+\begin{DoxyCompactList}\small\item\em Konstruktor parametrowy. \end{DoxyCompactList}\item 
+\hypertarget{classGenerator_acc85fbe22690003267ba899bacf777d1}{virtual \hyperlink{classGenerator_acc85fbe22690003267ba899bacf777d1}{$\sim$\+Generator} ()}\label{classGenerator_acc85fbe22690003267ba899bacf777d1}
+
+\begin{DoxyCompactList}\small\item\em Dekonstruktor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGenerator_ace6b7b9d7b8afcf8a980277dee90d04b}{losuj} ()=0
+\begin{DoxyCompactList}\small\item\em Metoda wirtualna do losowania liczby. \end{DoxyCompactList}\item 
+void \hyperlink{classGenerator_a83f16e52b71ba9e343e6cabf49222af1}{set\+Poczatek} (int i\+Poczatek)
+\begin{DoxyCompactList}\small\item\em Metoda ustawiajaca poczatek. \end{DoxyCompactList}\item 
+void \hyperlink{classGenerator_a5da68a3284fb8528ce63c2cf5161c3df}{set\+Koniec} (int \hyperlink{classGenerator_a235b3d02ce62d19e803cc2295eb7911e}{i\+Koniec})
+\begin{DoxyCompactList}\small\item\em Metoda ustawiajaca koniec. \end{DoxyCompactList}\item 
+void \hyperlink{classGenerator_a2d2573ba6d6fe0390b1aee424d131e77}{set\+Nazwa} (string \hyperlink{classGenerator_a7e2c131c26baf31bb3f072115c619d1c}{str\+Nazwa\+Generatora})
+\begin{DoxyCompactList}\small\item\em Metoda ustawiajaca nazwe. \end{DoxyCompactList}\item 
+void \hyperlink{classGenerator_ab03aa321c664fee476a217ed69dc8bd4}{set\+Seed} (int)
+\begin{DoxyCompactList}\small\item\em Metoda ustawiajaca ziarno (seed) \end{DoxyCompactList}\item 
+int \hyperlink{classGenerator_abdb3e06225b7199d387c0cd81bc01731}{get\+Poczatek} ()
+\begin{DoxyCompactList}\small\item\em Metoda pobierajaca poczatek przedzialu. \end{DoxyCompactList}\item 
+int \hyperlink{classGenerator_ad5b35e58608e17ad7ca86b36926a3bbe}{get\+Koniec} ()
+\begin{DoxyCompactList}\small\item\em Metoda pobierajaca koniec przedzialu. \end{DoxyCompactList}\item 
+int \hyperlink{classGenerator_a633199af5cd153df7a76ddc4b64d752a}{get\+Seed} ()
+\begin{DoxyCompactList}\small\item\em Metoda pobierajaca ziarno. \end{DoxyCompactList}\item 
+int \hyperlink{classGenerator_aae4ac93fb2d5b73af6fd7fd303d2d94e}{get\+Wylosowana} ()
+\begin{DoxyCompactList}\small\item\em Metoda pobierajaca wylosowana liczbe. \end{DoxyCompactList}\item 
+string \hyperlink{classGenerator_a15bb85903497555e680e8e8eb0bb22d5}{get\+Nazwa} ()
+\begin{DoxyCompactList}\small\item\em Metoda pobierajaca nazwe generatora. \end{DoxyCompactList}\item 
+void \hyperlink{classGenerator_a8a224021c828a19866198cf1ee56584f}{nazwa} (ostream \&=cout)
+\begin{DoxyCompactList}\small\item\em Metoda wypisujaca nazwe generatora do strumienia. \end{DoxyCompactList}\item 
+void \hyperlink{classGenerator_ac62e20399a0509a683ac9a9aad47a9d9}{print} (ostream \&=cout)
+\begin{DoxyCompactList}\small\item\em Metoda wypisujaca wylosowana liczbe do strumienia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGenerator_a7e0b83b2cee515dd54debf073322acde}{int {\bfseries i\+Poczatek}}\label{classGenerator_a7e0b83b2cee515dd54debf073322acde}
+
+\item 
+\hypertarget{classGenerator_a235b3d02ce62d19e803cc2295eb7911e}{int \hyperlink{classGenerator_a235b3d02ce62d19e803cc2295eb7911e}{i\+Koniec}}\label{classGenerator_a235b3d02ce62d19e803cc2295eb7911e}
+
+\begin{DoxyCompactList}\small\item\em Poczatek przedzialu. \end{DoxyCompactList}\item 
+\hypertarget{classGenerator_ae77446ccb4946b8eb28d0f20f3e4a95f}{int \hyperlink{classGenerator_ae77446ccb4946b8eb28d0f20f3e4a95f}{seed}}\label{classGenerator_ae77446ccb4946b8eb28d0f20f3e4a95f}
+
+\begin{DoxyCompactList}\small\item\em Koniec przedzialu. \end{DoxyCompactList}\item 
+\hypertarget{classGenerator_a7e2c131c26baf31bb3f072115c619d1c}{string \hyperlink{classGenerator_a7e2c131c26baf31bb3f072115c619d1c}{str\+Nazwa\+Generatora}}\label{classGenerator_a7e2c131c26baf31bb3f072115c619d1c}
+
+\begin{DoxyCompactList}\small\item\em Ziarno. \end{DoxyCompactList}\item 
+\hypertarget{classGenerator_a386d211c8be5e1dd7b5672c6725f8ee3}{int \hyperlink{classGenerator_a386d211c8be5e1dd7b5672c6725f8ee3}{i\+Wylosowana}}\label{classGenerator_a386d211c8be5e1dd7b5672c6725f8ee3}
+
+\begin{DoxyCompactList}\small\item\em Nazwa generatora. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa abstrakcyjna generatora. 
+
+\begin{DoxyAuthor}{Autorzy}
+Jakub Syrek \& Katarzyna Żukowska 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+25.\+05.\+2014 
+\end{DoxyDate}
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classGenerator_aaaf1e5f3a47ede3ef8a96a301ee04a10}{\index{Generator@{Generator}!Generator@{Generator}}
+\index{Generator@{Generator}!Generator@{Generator}}
+\subsubsection[{Generator}]{\setlength{\rightskip}{0pt plus 5cm}Generator\+::\+Generator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classGenerator_aaaf1e5f3a47ede3ef8a96a301ee04a10}
+
+
+Wylosowana liczba. 
+
+Konstruktor \hypertarget{classGenerator_aae31ea3cea1d9b3770b74965b843fcfc}{\index{Generator@{Generator}!Generator@{Generator}}
+\index{Generator@{Generator}!Generator@{Generator}}
+\subsubsection[{Generator}]{\setlength{\rightskip}{0pt plus 5cm}Generator\+::\+Generator (
+\begin{DoxyParamCaption}
+\item[{int}]{i\+Poczatek, }
+\item[{int}]{i\+Koniec, }
+\item[{int}]{seed, }
+\item[{string}]{str\+Nazwa\+Generatora}
+\end{DoxyParamCaption}
+)}}\label{classGenerator_aae31ea3cea1d9b3770b74965b843fcfc}
+
+
+Konstruktor parametrowy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em i\+Poczatek} & -\/ poczatek przedzialu \\
+\hline
+{\em i\+Koniec} & -\/ koniec przedzialu \\
+\hline
+{\em seed} & -\/ ziarno (warosc poczatkowa) \\
+\hline
+{\em str\+Nazwa\+Generatora} & -\/ nazwa generatora \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classGenerator_ad5b35e58608e17ad7ca86b36926a3bbe}{\index{Generator@{Generator}!get\+Koniec@{get\+Koniec}}
+\index{get\+Koniec@{get\+Koniec}!Generator@{Generator}}
+\subsubsection[{get\+Koniec}]{\setlength{\rightskip}{0pt plus 5cm}int Generator\+::get\+Koniec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classGenerator_ad5b35e58608e17ad7ca86b36926a3bbe}
+
+
+Metoda pobierajaca koniec przedzialu. 
+
+\begin{DoxyReturn}{Zwraca}
+Koniec przedzialu 
+\end{DoxyReturn}
+\hypertarget{classGenerator_a15bb85903497555e680e8e8eb0bb22d5}{\index{Generator@{Generator}!get\+Nazwa@{get\+Nazwa}}
+\index{get\+Nazwa@{get\+Nazwa}!Generator@{Generator}}
+\subsubsection[{get\+Nazwa}]{\setlength{\rightskip}{0pt plus 5cm}string Generator\+::get\+Nazwa (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classGenerator_a15bb85903497555e680e8e8eb0bb22d5}
+
+
+Metoda pobierajaca nazwe generatora. 
+
+\begin{DoxyReturn}{Zwraca}
+Nazwa generatora 
+\end{DoxyReturn}
+\hypertarget{classGenerator_abdb3e06225b7199d387c0cd81bc01731}{\index{Generator@{Generator}!get\+Poczatek@{get\+Poczatek}}
+\index{get\+Poczatek@{get\+Poczatek}!Generator@{Generator}}
+\subsubsection[{get\+Poczatek}]{\setlength{\rightskip}{0pt plus 5cm}int Generator\+::get\+Poczatek (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classGenerator_abdb3e06225b7199d387c0cd81bc01731}
+
+
+Metoda pobierajaca poczatek przedzialu. 
+
+\begin{DoxyReturn}{Zwraca}
+Poczatek przedzialu 
+\end{DoxyReturn}
+\hypertarget{classGenerator_a633199af5cd153df7a76ddc4b64d752a}{\index{Generator@{Generator}!get\+Seed@{get\+Seed}}
+\index{get\+Seed@{get\+Seed}!Generator@{Generator}}
+\subsubsection[{get\+Seed}]{\setlength{\rightskip}{0pt plus 5cm}int Generator\+::get\+Seed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classGenerator_a633199af5cd153df7a76ddc4b64d752a}
+
+
+Metoda pobierajaca ziarno. 
+
+\begin{DoxyReturn}{Zwraca}
+Ziarno 
+\end{DoxyReturn}
+\hypertarget{classGenerator_aae4ac93fb2d5b73af6fd7fd303d2d94e}{\index{Generator@{Generator}!get\+Wylosowana@{get\+Wylosowana}}
+\index{get\+Wylosowana@{get\+Wylosowana}!Generator@{Generator}}
+\subsubsection[{get\+Wylosowana}]{\setlength{\rightskip}{0pt plus 5cm}int Generator\+::get\+Wylosowana (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classGenerator_aae4ac93fb2d5b73af6fd7fd303d2d94e}
+
+
+Metoda pobierajaca wylosowana liczbe. 
+
+\begin{DoxyReturn}{Zwraca}
+Wylosowana liczba 
+\end{DoxyReturn}
+\hypertarget{classGenerator_ace6b7b9d7b8afcf8a980277dee90d04b}{\index{Generator@{Generator}!losuj@{losuj}}
+\index{losuj@{losuj}!Generator@{Generator}}
+\subsubsection[{losuj}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Generator\+::losuj (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classGenerator_ace6b7b9d7b8afcf8a980277dee90d04b}
+
+
+Metoda wirtualna do losowania liczby. 
+
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+
+
+Implementowany w \hyperlink{classGenerator3_a89928ff47b804aa4af9dfd67c458c92b}{Generator3}, \hyperlink{classGenerator2_a96705c3ab595c06470c3bbb0c24881b0}{Generator2} i \hyperlink{classGenerator1_a4b00ed3593e4be47a2101e0a027dfea6}{Generator1}.
+
+\hypertarget{classGenerator_a8a224021c828a19866198cf1ee56584f}{\index{Generator@{Generator}!nazwa@{nazwa}}
+\index{nazwa@{nazwa}!Generator@{Generator}}
+\subsubsection[{nazwa}]{\setlength{\rightskip}{0pt plus 5cm}void Generator\+::nazwa (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{output = {\ttfamily cout}}
+\end{DoxyParamCaption}
+)}}\label{classGenerator_a8a224021c828a19866198cf1ee56584f}
+
+
+Metoda wypisujaca nazwe generatora do strumienia. 
+
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+\hypertarget{classGenerator_ac62e20399a0509a683ac9a9aad47a9d9}{\index{Generator@{Generator}!print@{print}}
+\index{print@{print}!Generator@{Generator}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void Generator\+::print (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{output = {\ttfamily cout}}
+\end{DoxyParamCaption}
+)}}\label{classGenerator_ac62e20399a0509a683ac9a9aad47a9d9}
+
+
+Metoda wypisujaca wylosowana liczbe do strumienia. 
+
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+\hypertarget{classGenerator_a5da68a3284fb8528ce63c2cf5161c3df}{\index{Generator@{Generator}!set\+Koniec@{set\+Koniec}}
+\index{set\+Koniec@{set\+Koniec}!Generator@{Generator}}
+\subsubsection[{set\+Koniec}]{\setlength{\rightskip}{0pt plus 5cm}void Generator\+::set\+Koniec (
+\begin{DoxyParamCaption}
+\item[{int}]{i\+Koniec}
+\end{DoxyParamCaption}
+)}}\label{classGenerator_a5da68a3284fb8528ce63c2cf5161c3df}
+
+
+Metoda ustawiajaca koniec. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em i\+Koniec} & -\/ poczatek przedzialu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+\hypertarget{classGenerator_a2d2573ba6d6fe0390b1aee424d131e77}{\index{Generator@{Generator}!set\+Nazwa@{set\+Nazwa}}
+\index{set\+Nazwa@{set\+Nazwa}!Generator@{Generator}}
+\subsubsection[{set\+Nazwa}]{\setlength{\rightskip}{0pt plus 5cm}void Generator\+::set\+Nazwa (
+\begin{DoxyParamCaption}
+\item[{string}]{str\+Nazwa\+Generatora}
+\end{DoxyParamCaption}
+)}}\label{classGenerator_a2d2573ba6d6fe0390b1aee424d131e77}
+
+
+Metoda ustawiajaca nazwe. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em str\+Nazwa\+Generatora} & -\/ poczatek przedzialu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+\hypertarget{classGenerator_a83f16e52b71ba9e343e6cabf49222af1}{\index{Generator@{Generator}!set\+Poczatek@{set\+Poczatek}}
+\index{set\+Poczatek@{set\+Poczatek}!Generator@{Generator}}
+\subsubsection[{set\+Poczatek}]{\setlength{\rightskip}{0pt plus 5cm}void Generator\+::set\+Poczatek (
+\begin{DoxyParamCaption}
+\item[{int}]{i\+Poczatek}
+\end{DoxyParamCaption}
+)}}\label{classGenerator_a83f16e52b71ba9e343e6cabf49222af1}
+
+
+Metoda ustawiajaca poczatek. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em i\+Poczatek} & -\/ poczatek przedzialu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+\hypertarget{classGenerator_ab03aa321c664fee476a217ed69dc8bd4}{\index{Generator@{Generator}!set\+Seed@{set\+Seed}}
+\index{set\+Seed@{set\+Seed}!Generator@{Generator}}
+\subsubsection[{set\+Seed}]{\setlength{\rightskip}{0pt plus 5cm}void Generator\+::set\+Seed (
+\begin{DoxyParamCaption}
+\item[{int}]{seed}
+\end{DoxyParamCaption}
+)}}\label{classGenerator_ab03aa321c664fee476a217ed69dc8bd4}
+
+
+Metoda ustawiajaca ziarno (seed) 
+
+
+\begin{DoxyParams}{Parametry}
+{\em int} & -\/ ziarno \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Generator_8h}{Generator.\+h}\item 
+Generator.\+cpp\end{DoxyCompactItemize}

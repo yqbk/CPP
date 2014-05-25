@@ -1,0 +1,233 @@
+\hypertarget{classGenerator3}{\section{Dokumentacja klasy Generator3}
+\label{classGenerator3}\index{Generator3@{Generator3}}
+}
+
+
+Klasa generatora generatora Fibonacciego.  
+
+
+
+
+{\ttfamily \#include $<$Generator3.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Generator3
+
+
+Diagram współpracy dla Generator3\+:
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGenerator3_a6817e5557639442bef9bc31993b8ba59}{\hyperlink{classGenerator3_a6817e5557639442bef9bc31993b8ba59}{Generator3} ()}\label{classGenerator3_a6817e5557639442bef9bc31993b8ba59}
+
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\hyperlink{classGenerator3_a067bd1aa0bbdcccd0b26c2686ff0deb3}{Generator3} (int i\+Poczatek, int \hyperlink{classGenerator_a235b3d02ce62d19e803cc2295eb7911e}{i\+Koniec}, int \+\_\+size, int \+\_\+step, int \+\_\+seed, string str\+Nazwa)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametrowy. \end{DoxyCompactList}\item 
+\hypertarget{classGenerator3_a031ad6458f193c019538bc890fd57e88}{\hyperlink{classGenerator3_a031ad6458f193c019538bc890fd57e88}{$\sim$\+Generator3} ()}\label{classGenerator3_a031ad6458f193c019538bc890fd57e88}
+
+\begin{DoxyCompactList}\small\item\em Dekonstruktor. \end{DoxyCompactList}\item 
+void \hyperlink{classGenerator3_a51a15107777737fbefc69ea25d51bf5e}{reset\+Generator} (int i\+Poczatek, int \hyperlink{classGenerator_a235b3d02ce62d19e803cc2295eb7911e}{i\+Koniec}, int \+\_\+size, int \+\_\+step, int \+\_\+seed)
+\begin{DoxyCompactList}\small\item\em Resetowanie generatora. \end{DoxyCompactList}\item 
+void \hyperlink{classGenerator3_a89928ff47b804aa4af9dfd67c458c92b}{losuj} ()
+\begin{DoxyCompactList}\small\item\em Metoda losujaca liczby. \end{DoxyCompactList}\item 
+int \hyperlink{classGenerator3_ab12aab6f893a507374a3f7af706babf5}{get\+Size} ()
+\begin{DoxyCompactList}\small\item\em Metoda pobierajaca rozmiar. \end{DoxyCompactList}\item 
+int \hyperlink{classGenerator3_a461d34d597de24d4f3fb2d0582dbdc73}{get\+Step} ()
+\begin{DoxyCompactList}\small\item\em Metoda pobierajaca krok. \end{DoxyCompactList}\item 
+int \hyperlink{classGenerator3_a8cb1ea0705c811ea15e6526f95b3d220}{get\+Seed} ()
+\begin{DoxyCompactList}\small\item\em Metoda pobierajaca ziarno. \end{DoxyCompactList}\item 
+void \hyperlink{classGenerator3_a1ddc34bcde320baf2548f78667354ce9}{set\+Size} (int)
+\begin{DoxyCompactList}\small\item\em Metoda ustawiająca rozmiar. \end{DoxyCompactList}\item 
+void \hyperlink{classGenerator3_ad07ce02a3a4253af0d18fc4d07da652d}{set\+Step} (int)
+\begin{DoxyCompactList}\small\item\em Metoda ustawiająca krok generatora. \end{DoxyCompactList}\item 
+void \hyperlink{classGenerator3_a6c5d102d0e64d72b72e23726f56b8af9}{set\+Seed} (int)
+\begin{DoxyCompactList}\small\item\em Metoda ustawiająca ziarno. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\subsection{Opis szczegółowy}
+Klasa generatora generatora Fibonacciego. 
+
+\begin{DoxyAuthor}{Autorzy}
+Jakub Syrek \& Katarzyna Żukowska 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+25.\+05.\+2014 
+\end{DoxyDate}
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classGenerator3_a067bd1aa0bbdcccd0b26c2686ff0deb3}{\index{Generator3@{Generator3}!Generator3@{Generator3}}
+\index{Generator3@{Generator3}!Generator3@{Generator3}}
+\subsubsection[{Generator3}]{\setlength{\rightskip}{0pt plus 5cm}Generator3\+::\+Generator3 (
+\begin{DoxyParamCaption}
+\item[{int}]{i\+Poczatek, }
+\item[{int}]{i\+Koniec, }
+\item[{int}]{\+\_\+size, }
+\item[{int}]{\+\_\+step, }
+\item[{int}]{\+\_\+seed, }
+\item[{string}]{str\+Nazwa}
+\end{DoxyParamCaption}
+)}}\label{classGenerator3_a067bd1aa0bbdcccd0b26c2686ff0deb3}
+
+
+Konstruktor parametrowy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em i\+Poczatek} & -\/ poczatek przedzialu \\
+\hline
+{\em i\+Koniec} & -\/ koniec przedzialu \\
+\hline
+{\em \+\_\+seed} & -\/ ziarno (wartosc poczatkowa) \\
+\hline
+{\em \+\_\+size} & -\/ wymiar tablicy \\
+\hline
+{\em \+\_\+step} & -\/ krok generatora \\
+\hline
+{\em str\+Nazwa\+Generatora} & -\/ nazwa generatora \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classGenerator3_a8cb1ea0705c811ea15e6526f95b3d220}{\index{Generator3@{Generator3}!get\+Seed@{get\+Seed}}
+\index{get\+Seed@{get\+Seed}!Generator3@{Generator3}}
+\subsubsection[{get\+Seed}]{\setlength{\rightskip}{0pt plus 5cm}int Generator3\+::get\+Seed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classGenerator3_a8cb1ea0705c811ea15e6526f95b3d220}
+
+
+Metoda pobierajaca ziarno. 
+
+\begin{DoxyReturn}{Zwraca}
+Wartosc ziarna 
+\end{DoxyReturn}
+\hypertarget{classGenerator3_ab12aab6f893a507374a3f7af706babf5}{\index{Generator3@{Generator3}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Generator3@{Generator3}}
+\subsubsection[{get\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int Generator3\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classGenerator3_ab12aab6f893a507374a3f7af706babf5}
+
+
+Metoda pobierajaca rozmiar. 
+
+\begin{DoxyReturn}{Zwraca}
+Wartosc wymiaru 
+\end{DoxyReturn}
+\hypertarget{classGenerator3_a461d34d597de24d4f3fb2d0582dbdc73}{\index{Generator3@{Generator3}!get\+Step@{get\+Step}}
+\index{get\+Step@{get\+Step}!Generator3@{Generator3}}
+\subsubsection[{get\+Step}]{\setlength{\rightskip}{0pt plus 5cm}int Generator3\+::get\+Step (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classGenerator3_a461d34d597de24d4f3fb2d0582dbdc73}
+
+
+Metoda pobierajaca krok. 
+
+\begin{DoxyReturn}{Zwraca}
+Wartosc kroku 
+\end{DoxyReturn}
+\hypertarget{classGenerator3_a89928ff47b804aa4af9dfd67c458c92b}{\index{Generator3@{Generator3}!losuj@{losuj}}
+\index{losuj@{losuj}!Generator3@{Generator3}}
+\subsubsection[{losuj}]{\setlength{\rightskip}{0pt plus 5cm}void Generator3\+::losuj (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classGenerator3_a89928ff47b804aa4af9dfd67c458c92b}
+
+
+Metoda losujaca liczby. 
+
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+
+
+Implementuje \hyperlink{classGenerator_ace6b7b9d7b8afcf8a980277dee90d04b}{Generator}.
+
+\hypertarget{classGenerator3_a51a15107777737fbefc69ea25d51bf5e}{\index{Generator3@{Generator3}!reset\+Generator@{reset\+Generator}}
+\index{reset\+Generator@{reset\+Generator}!Generator3@{Generator3}}
+\subsubsection[{reset\+Generator}]{\setlength{\rightskip}{0pt plus 5cm}void Generator3\+::reset\+Generator (
+\begin{DoxyParamCaption}
+\item[{int}]{i\+Poczatek, }
+\item[{int}]{i\+Koniec, }
+\item[{int}]{\+\_\+size, }
+\item[{int}]{\+\_\+step, }
+\item[{int}]{\+\_\+seed}
+\end{DoxyParamCaption}
+)}}\label{classGenerator3_a51a15107777737fbefc69ea25d51bf5e}
+
+
+Resetowanie generatora. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em i\+Poczatek} & -\/ poczatek przedzialu \\
+\hline
+{\em i\+Koniec} & -\/ koniec przedzialu \\
+\hline
+{\em \+\_\+seed} & -\/ ziarno (wartosc poczatkowa) \\
+\hline
+{\em \+\_\+size} & -\/ wymiar tablicy \\
+\hline
+{\em \+\_\+step} & -\/ krok generatora \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+\hypertarget{classGenerator3_a6c5d102d0e64d72b72e23726f56b8af9}{\index{Generator3@{Generator3}!set\+Seed@{set\+Seed}}
+\index{set\+Seed@{set\+Seed}!Generator3@{Generator3}}
+\subsubsection[{set\+Seed}]{\setlength{\rightskip}{0pt plus 5cm}void Generator3\+::set\+Seed (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+seed}
+\end{DoxyParamCaption}
+)}}\label{classGenerator3_a6c5d102d0e64d72b72e23726f56b8af9}
+
+
+Metoda ustawiająca ziarno. 
+
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+\hypertarget{classGenerator3_a1ddc34bcde320baf2548f78667354ce9}{\index{Generator3@{Generator3}!set\+Size@{set\+Size}}
+\index{set\+Size@{set\+Size}!Generator3@{Generator3}}
+\subsubsection[{set\+Size}]{\setlength{\rightskip}{0pt plus 5cm}void Generator3\+::set\+Size (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+size}
+\end{DoxyParamCaption}
+)}}\label{classGenerator3_a1ddc34bcde320baf2548f78667354ce9}
+
+
+Metoda ustawiająca rozmiar. 
+
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+\hypertarget{classGenerator3_ad07ce02a3a4253af0d18fc4d07da652d}{\index{Generator3@{Generator3}!set\+Step@{set\+Step}}
+\index{set\+Step@{set\+Step}!Generator3@{Generator3}}
+\subsubsection[{set\+Step}]{\setlength{\rightskip}{0pt plus 5cm}void Generator3\+::set\+Step (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+step}
+\end{DoxyParamCaption}
+)}}\label{classGenerator3_ad07ce02a3a4253af0d18fc4d07da652d}
+
+
+Metoda ustawiająca krok generatora. 
+
+\begin{DoxyReturn}{Zwraca}
+Nic nie zwraca 
+\end{DoxyReturn}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Generator3_8h}{Generator3.\+h}\item 
+Generator3.\+cpp\end{DoxyCompactItemize}

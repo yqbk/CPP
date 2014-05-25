@@ -1,0 +1,14 @@
+digraph "Test"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Test",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Test1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTest1.html",tooltip="Klasa Testu parzyste/nieparzyste dziedziczaca po klasie Test. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Test2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTest2.html",tooltip="Klasa Testu liczby pierwsze dziedziczaca po klasie Test. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Test3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTest3.html",tooltip="Klasa Testu powtorzenia dziedziczaca po klasie Test. "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Test4",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTest4.html",tooltip="Klasa Testu Pi dziedziczaca po klasie Test. "];
+}

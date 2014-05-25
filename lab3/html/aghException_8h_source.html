@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>Generatory liczb losowych: Plik źródłowy aghException.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Generatory liczb losowych
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">aghException.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="aghException_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// -------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef AGH_EXCEPTION</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define AGH_EXCEPTION</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// --------------------------------------------------------------</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// --------------------------------------------------------------</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classaghException.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaghException.html">aghException</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">int</span> _errorCode;         </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">int</span> _errorLine;         </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">string</span> _errorMessage;    </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">string</span> _errorFile;       </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">void</span> reset(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classaghException.html#a4823634f8bfb0fe7338b49f0e26fc90a">aghException</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="classaghException.html#a4823634f8bfb0fe7338b49f0e26fc90a">aghException</a>(<a class="code" href="classaghException.html">aghException</a> <span class="keyword">const</span>&amp; __other);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="classaghException.html#a4823634f8bfb0fe7338b49f0e26fc90a">aghException</a>(<span class="keywordtype">int</span> __errorCode, <span class="keywordtype">int</span> __errorLine);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="classaghException.html#a4823634f8bfb0fe7338b49f0e26fc90a">aghException</a>(<span class="keywordtype">int</span> __errorCode, <span class="keywordtype">string</span> __errorMessage);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="classaghException.html#a4823634f8bfb0fe7338b49f0e26fc90a">aghException</a>(<span class="keywordtype">string</span> __errorFile, <span class="keywordtype">int</span> __errorLine);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="code" href="classaghException.html#a4823634f8bfb0fe7338b49f0e26fc90a">aghException</a>(<span class="keywordtype">int</span> __errorCode, <span class="keywordtype">string</span> __errorMessage, <span class="keywordtype">string</span> __errorFile, <span class="keywordtype">int</span> __errorLine);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classaghException.html#acdf702b31955bd115042a8c22fdde3b0">~aghException</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classaghException.html#aa6e25c04b7ceed6fbb5ca9b3c780921b">errorCode</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classaghException.html#aecaea0d8a8a6f5740fbeb393e0d1c2e8">errorLine</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="classaghException.html#acd71f90fa8decaceebc110e61bc11e26">errorMessage</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="classaghException.html#a1f5d681faec44b25a1ce5afabe73b9cd">errorFile</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classaghException.html#ae181a4bf4fddee1bf470c3079c74deef">setErrorLine</a>(<span class="keywordtype">int</span> __errorLine);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classaghException.html#a6d415efebe645970a3eac339a33b5aa9">setErrorCode</a>(<span class="keywordtype">int</span> __errorCode);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classaghException.html#a3b89888678fa5d33827386d2ed9d8d3a">setErrorMessage</a>(<span class="keywordtype">string</span> __errorMessage);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classaghException.html#a94b807f0f954e4ff09bdcb104f7388f4">setErrorFile</a>(<span class="keywordtype">string</span> __errorFile);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <a class="code" href="classaghException.html">aghException</a>&amp; <a class="code" href="classaghException.html#a648edf43a073c5141bf1cd7079b61230">operator=</a>(<a class="code" href="classaghException.html">aghException</a> <span class="keyword">const</span>&amp; __other);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;};</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">// --------------------------------------------------------------</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;ostream&amp; <a class="code" href="aghException_8h.html#a10c70066bf9a72136e183f7fe9ecc9ea">operator&lt;&lt;</a>(ostream&amp; __out, <a class="code" href="classaghException.html">aghException</a>&amp; __exception);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">// --------------------------------------------------------------</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classaghException_html_a1f5d681faec44b25a1ce5afabe73b9cd"><div class="ttname"><a href="classaghException.html#a1f5d681faec44b25a1ce5afabe73b9cd">aghException::errorFile</a></div><div class="ttdeci">virtual string errorFile(void) const </div><div class="ttdoc">Virtual function that returns the error file name. </div><div class="ttdef"><b>Definition:</b> aghException.cpp:94</div></div>
+<div class="ttc" id="classaghException_html_aecaea0d8a8a6f5740fbeb393e0d1c2e8"><div class="ttname"><a href="classaghException.html#aecaea0d8a8a6f5740fbeb393e0d1c2e8">aghException::errorLine</a></div><div class="ttdeci">virtual int errorLine(void) const </div><div class="ttdoc">Virtual function that returns the line in the file where the error occured. </div><div class="ttdef"><b>Definition:</b> aghException.cpp:82</div></div>
+<div class="ttc" id="classaghException_html"><div class="ttname"><a href="classaghException.html">aghException</a></div><div class="ttdoc">The definition of aghException class that allows for exception handling. </div><div class="ttdef"><b>Definition:</b> aghException.h:24</div></div>
+<div class="ttc" id="classaghException_html_a648edf43a073c5141bf1cd7079b61230"><div class="ttname"><a href="classaghException.html#a648edf43a073c5141bf1cd7079b61230">aghException::operator=</a></div><div class="ttdeci">aghException &amp; operator=(aghException const &amp;__other)</div><div class="ttdoc">Assigments operator. </div><div class="ttdef"><b>Definition:</b> aghException.cpp:124</div></div>
+<div class="ttc" id="classaghException_html_acd71f90fa8decaceebc110e61bc11e26"><div class="ttname"><a href="classaghException.html#acd71f90fa8decaceebc110e61bc11e26">aghException::errorMessage</a></div><div class="ttdeci">virtual string errorMessage(void) const </div><div class="ttdoc">Virtual function that returns the error message for a user. </div><div class="ttdef"><b>Definition:</b> aghException.cpp:88</div></div>
+<div class="ttc" id="classaghException_html_a6d415efebe645970a3eac339a33b5aa9"><div class="ttname"><a href="classaghException.html#a6d415efebe645970a3eac339a33b5aa9">aghException::setErrorCode</a></div><div class="ttdeci">virtual void setErrorCode(int __errorCode)</div><div class="ttdoc">Virtual function that sets the error code. </div><div class="ttdef"><b>Definition:</b> aghException.cpp:106</div></div>
+<div class="ttc" id="aghException_8h_html_a10c70066bf9a72136e183f7fe9ecc9ea"><div class="ttname"><a href="aghException_8h.html#a10c70066bf9a72136e183f7fe9ecc9ea">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;__out, aghException &amp;__exception)</div><div class="ttdoc">an overloaded operator << that writes the error parameters to the given stream </div><div class="ttdef"><b>Definition:</b> aghException.cpp:137</div></div>
+<div class="ttc" id="classaghException_html_a94b807f0f954e4ff09bdcb104f7388f4"><div class="ttname"><a href="classaghException.html#a94b807f0f954e4ff09bdcb104f7388f4">aghException::setErrorFile</a></div><div class="ttdeci">virtual void setErrorFile(string __errorFile)</div><div class="ttdoc">Virtual function that sets the error file name. </div><div class="ttdef"><b>Definition:</b> aghException.cpp:118</div></div>
+<div class="ttc" id="classaghException_html_a3b89888678fa5d33827386d2ed9d8d3a"><div class="ttname"><a href="classaghException.html#a3b89888678fa5d33827386d2ed9d8d3a">aghException::setErrorMessage</a></div><div class="ttdeci">virtual void setErrorMessage(string __errorMessage)</div><div class="ttdoc">Virtual function that sets the error message. </div><div class="ttdef"><b>Definition:</b> aghException.cpp:112</div></div>
+<div class="ttc" id="classaghException_html_aa6e25c04b7ceed6fbb5ca9b3c780921b"><div class="ttname"><a href="classaghException.html#aa6e25c04b7ceed6fbb5ca9b3c780921b">aghException::errorCode</a></div><div class="ttdeci">virtual int errorCode(void) const </div><div class="ttdoc">Virtual function that returns the error code. </div><div class="ttdef"><b>Definition:</b> aghException.cpp:76</div></div>
+<div class="ttc" id="classaghException_html_acdf702b31955bd115042a8c22fdde3b0"><div class="ttname"><a href="classaghException.html#acdf702b31955bd115042a8c22fdde3b0">aghException::~aghException</a></div><div class="ttdeci">virtual ~aghException(void)</div><div class="ttdoc">The class destructor. </div><div class="ttdef"><b>Definition:</b> aghException.cpp:61</div></div>
+<div class="ttc" id="classaghException_html_ae181a4bf4fddee1bf470c3079c74deef"><div class="ttname"><a href="classaghException.html#ae181a4bf4fddee1bf470c3079c74deef">aghException::setErrorLine</a></div><div class="ttdeci">virtual void setErrorLine(int __errorLine)</div><div class="ttdoc">Virtual function that sets the error line number. </div><div class="ttdef"><b>Definition:</b> aghException.cpp:100</div></div>
+<div class="ttc" id="classaghException_html_a4823634f8bfb0fe7338b49f0e26fc90a"><div class="ttname"><a href="classaghException.html#a4823634f8bfb0fe7338b49f0e26fc90a">aghException::aghException</a></div><div class="ttdeci">aghException(void)</div><div class="ttdoc">The default constructor. </div><div class="ttdef"><b>Definition:</b> aghException.cpp:11</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Pn, 26 maj 2014 00:42:04 dla Generatory liczb losowych programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

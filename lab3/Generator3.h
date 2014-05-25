@@ -24,15 +24,9 @@ class Generator3 : public Generator
 
       int size;       ///rozmiar tablicy
       int step;       ///krok generatora
-      int* state;     ///tablica wyników
+      int* wynikiGen;     ///tablica wyników
 
       static int i;   ///licznik
-
-       /**
-       * @brief Metoda przygotowujaca generator do uruchomienia
-       * @return Nic nie zwraca 
-       */
-      void initializeGenerator(void);
 
 
     public:
@@ -46,12 +40,12 @@ class Generator3 : public Generator
        * @brief Konstruktor parametrowy
        * @param iPoczatek - poczatek przedzialu  
        * @param iKoniec - koniec przedzialu
-       * @param _seed - ziarno (wartosc poczatkowa)
-       * @param _size - wymiar tablicy
-       * @param _step - krok generatora
+       * @param seed - ziarno (wartosc poczatkowa)
+       * @param size - wymiar tablicy
+       * @param step - krok generatora
        * @param strNazwaGeneratora - nazwa generatora
        */
-      Generator3(int iPoczatek, int iKoniec, int _size, int _step, int _seed, string strNazwa); 
+      Generator3(int iPoczatek, int iKoniec, int size, int step, int seed, string strNazwa); 
 
        /**
        * @brief Dekonstruktor
@@ -60,15 +54,21 @@ class Generator3 : public Generator
 
 // ---------------------------------------------------------
        /**
+       * @brief Metoda przygotowujaca generator do uruchomienia
+       * @return Nic nie zwraca 
+       */
+      void setGenerator();
+
+       /**
        * @brief Resetowanie generatora
        * @param iPoczatek - poczatek przedzialu  
        * @param iKoniec - koniec przedzialu
-       * @param _seed - ziarno (wartosc poczatkowa)
-       * @param _size - wymiar tablicy
-       * @param _step - krok generatora
+       * @param seed - ziarno (wartosc poczatkowa)
+       * @param size - wymiar tablicy
+       * @param step - krok generatora
        * @return Nic nie zwraca
        */
-      void resetGenerator(int iPoczatek, int iKoniec, int _size, int _step, int _seed); 
+      void resetGenerator(int iPoczatek, int iKoniec, int size, int step, int seed); 
 
        /**
        * @brief Metoda losujaca liczby
@@ -100,18 +100,21 @@ class Generator3 : public Generator
 // ---------------------------------------------------------
        /**
        * @brief Metoda ustawiająca rozmiar
+       * @param size - rozmiar
        * @return Nic nie zwraca 
        */
       void setSize(int);
 
        /**
        * @brief Metoda ustawiająca krok generatora
+       * @param step - krok
        * @return Nic nie zwraca 
        */
       void setStep(int);
 
        /**
        * @brief Metoda ustawiająca ziarno
+       * @param seed - ziarno
        * @return Nic nie zwraca 
        */
       void setSeed(int);

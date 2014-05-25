@@ -29,9 +29,15 @@ void Test2::testuj()
     for (int i = 0; i < count; ++i)  
         pierwsze[i] = fib(i);   
 
+    cout << endl;
+
     for (int i = 0; i < this->iIloscLosowan; i++)        
         for (int j = 0; j < count; j++)        
-            if(wyniki[i] == pierwsze[j]) ++iIloscPierwszych;   
+            if(wyniki[i] == pierwsze[j])
+            { 
+                ++iIloscPierwszych;   
+                cout << "[" << wyniki[i] << "] ";
+            }
 }
 
 // ---------------------------------------------------------
