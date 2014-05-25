@@ -26,9 +26,9 @@ digraph "aghInclude.h"
   Node11 [label="Generator.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Generator_8h.html",tooltip="Plik nagłówkowy z deklarajcą klasy abstrakcyjnej generatora. "];
   Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node12 [label="Generator1.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Generator1_8h.html",tooltip="Plik nagłówkowy z deklarajcą klasy generatora wbudowanego. "];
+  Node12 [label="Generator1.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Generator1_8h.html",tooltip="Plik nagłówkowy z deklarajcą klasy generatora wbudowanego dziedziczony z \"Generator\". "];
   Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node13 [label="Generator2.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Generator2_8h.html",tooltip="Plik nagłówkowy z deklarajcą klasy generatora Multiplikatywnego LCG. "];
+  Node13 [label="Generator2.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Generator2_8h.html",tooltip="Plik nagłówkowy z deklarajcą klasy generatora Multiplikatywnego LCG dziedziczony z \"Generator\"..."];
   Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node14 [label="Generator3.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Generator3_8h_source.html"];
   Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
