@@ -3,7 +3,7 @@
 * \authors Jakub Syrek & Katarzyna Żukowska
 * \date 25.05.2014
 * \version 1.0
-* \brief Plik nagłówkowy z deklarajcą klasy generatora wbudowanego dziedziczony z "Generator"
+* \brief Plik nagłówkowy z deklarajcą klasy generatora wbudowanego dziedziczony po klasie Generator
 */
 
 #ifndef GENERATOR1_H
@@ -15,7 +15,7 @@
 * \class Generator1
 * \authors Jakub Syrek & Katarzyna Żukowska
 * \date 25.05.2014
-* \brief Klasa generatora wbudowanego dziedziczona z "Generator"
+* \brief Klasa generatora wbudowanego dziedziczona po klasie Generator
 */
 
 class Generator1 : public Generator

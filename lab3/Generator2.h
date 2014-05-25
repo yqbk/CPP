@@ -3,7 +3,7 @@
 * \authors Jakub Syrek & Katarzyna Żukowska
 * \date 25.05.2014
 * \version 1.0
-* \brief Plik nagłówkowy z deklarajcą klasy generatora Multiplikatywnego LCG dziedziczony z "Generator"
+* \brief Plik nagłówkowy z deklarajcą klasy generatora Multiplikatywnego LCG dziedziczony po klasie Generator
 */
 
 #ifndef GENERATOR2_H
@@ -15,7 +15,7 @@
 * \class Generator2
 * \authors Jakub Syrek & Katarzyna Żukowska
 * \date 25.05.2014
-* \brief Klasa generatora Multiplikatywnego LCG dziedziczona z "Generator"
+* \brief Klasa generatora Multiplikatywnego LCG dziedziczona po klasie Generator
 */
 
 class Generator2 : public Generator
