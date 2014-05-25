@@ -4,7 +4,7 @@ var searchData=
   ['seterrorfile',['setErrorFile',['../classaghException.html#a94b807f0f954e4ff09bdcb104f7388f4',1,'aghException']]],
   ['seterrorline',['setErrorLine',['../classaghException.html#ae181a4bf4fddee1bf470c3079c74deef',1,'aghException']]],
   ['seterrormessage',['setErrorMessage',['../classaghException.html#a3b89888678fa5d33827386d2ed9d8d3a',1,'aghException']]],
-  ['setgenerator',['setGenerator',['../classTest.html#adab32b84de0a057a71f6a3fe14ed16bd',1,'Test']]],
+  ['setgenerator',['setGenerator',['../classGenerator3.html#a240980004aee2739b768def7ef71eedd',1,'Generator3::setGenerator()'],['../classTest.html#adab32b84de0a057a71f6a3fe14ed16bd',1,'Test::setGenerator()']]],
   ['setilosclosowan',['setIloscLosowan',['../classTest.html#af3ef37c59875a1d95d6ba65e66fdce4b',1,'Test']]],
   ['setkoniec',['setKoniec',['../classGenerator.html#a5da68a3284fb8528ce63c2cf5161c3df',1,'Generator']]],
   ['setnazwa',['setNazwa',['../classGenerator.html#a2d2573ba6d6fe0390b1aee424d131e77',1,'Generator::setNazwa()'],['../classTest.html#a20b10cc4940235337f3e1a5189aef625',1,'Test::setNazwa()']]],

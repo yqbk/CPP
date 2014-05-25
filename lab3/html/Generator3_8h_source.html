@@ -83,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
 <div class="title">Generator3.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="Generator3_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef GENERATOR3_H</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define GENERATOR3_H</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
@@ -95,23 +95,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      <span class="keywordtype">int</span> size;       </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keywordtype">int</span> step;       </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <span class="keywordtype">int</span>* state;     </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <span class="keywordtype">int</span>* wynikiGen;     </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      <span class="keyword">static</span> <span class="keywordtype">int</span> i;   </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keywordtype">void</span> initializeGenerator(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// ---------------------------------------------------------</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"></span>        <a class="code" href="classGenerator3.html#a6817e5557639442bef9bc31993b8ba59">Generator3</a>();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <a class="code" href="classGenerator3.html#a6817e5557639442bef9bc31993b8ba59">Generator3</a>(<span class="keywordtype">int</span> iPoczatek, <span class="keywordtype">int</span> <a class="code" href="classGenerator.html#a235b3d02ce62d19e803cc2295eb7911e">iKoniec</a>, <span class="keywordtype">int</span> _size, <span class="keywordtype">int</span> _step, <span class="keywordtype">int</span> _seed, <span class="keywordtype">string</span> strNazwa); </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;       <a class="code" href="classGenerator3.html#a031ad6458f193c019538bc890fd57e88">~Generator3</a>();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">// ---------------------------------------------------------</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"></span>      <span class="keywordtype">void</span> <a class="code" href="classGenerator3.html#a51a15107777737fbefc69ea25d51bf5e">resetGenerator</a>(<span class="keywordtype">int</span> iPoczatek, <span class="keywordtype">int</span> iKoniec, <span class="keywordtype">int</span> _size, <span class="keywordtype">int</span> _step, <span class="keywordtype">int</span> _seed); </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// ---------------------------------------------------------</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"></span>        <a class="code" href="classGenerator3.html#a6817e5557639442bef9bc31993b8ba59">Generator3</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <a class="code" href="classGenerator3.html#a6817e5557639442bef9bc31993b8ba59">Generator3</a>(<span class="keywordtype">int</span> iPoczatek, <span class="keywordtype">int</span> <a class="code" href="classGenerator.html#a235b3d02ce62d19e803cc2295eb7911e">iKoniec</a>, <span class="keywordtype">int</span> size, <span class="keywordtype">int</span> step, <span class="keywordtype">int</span> <a class="code" href="classGenerator.html#ae77446ccb4946b8eb28d0f20f3e4a95f">seed</a>, <span class="keywordtype">string</span> strNazwa); </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;       <a class="code" href="classGenerator3.html#a031ad6458f193c019538bc890fd57e88">~Generator3</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">// ---------------------------------------------------------</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"></span>      <span class="keywordtype">void</span> <a class="code" href="classGenerator3.html#a240980004aee2739b768def7ef71eedd">setGenerator</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="classGenerator3.html#a5572186e8bb586ecf526f5db2a657c7d">resetGenerator</a>(<span class="keywordtype">int</span> iPoczatek, <span class="keywordtype">int</span> iKoniec, <span class="keywordtype">int</span> size, <span class="keywordtype">int</span> step, <span class="keywordtype">int</span> seed); </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="classGenerator3.html#a89928ff47b804aa4af9dfd67c458c92b">losuj</a>();</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
@@ -125,35 +125,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">// ---------------------------------------------------------</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment"></span>      <span class="keywordtype">void</span> <a class="code" href="classGenerator3.html#a1ddc34bcde320baf2548f78667354ce9">setSize</a>(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="classGenerator3.html#ad07ce02a3a4253af0d18fc4d07da652d">setStep</a>(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="classGenerator3.html#a6c5d102d0e64d72b72e23726f56b8af9">setSeed</a>(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;};</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">// ---------------------------------------------------------</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">// ---------------------------------------------------------</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="ttc" id="classGenerator3_html_a6817e5557639442bef9bc31993b8ba59"><div class="ttname"><a href="classGenerator3.html#a6817e5557639442bef9bc31993b8ba59">Generator3::Generator3</a></div><div class="ttdeci">Generator3()</div><div class="ttdoc">Konstruktor. </div><div class="ttdef"><b>Definition:</b> Generator3.cpp:9</div></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment"></span>      <span class="keywordtype">void</span> <a class="code" href="classGenerator3.html#a1ddc34bcde320baf2548f78667354ce9">setSize</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="classGenerator3.html#ad07ce02a3a4253af0d18fc4d07da652d">setStep</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="classGenerator3.html#a6c5d102d0e64d72b72e23726f56b8af9">setSeed</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">// ---------------------------------------------------------</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">// ---------------------------------------------------------</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="ttc" id="classGenerator3_html_a6817e5557639442bef9bc31993b8ba59"><div class="ttname"><a href="classGenerator3.html#a6817e5557639442bef9bc31993b8ba59">Generator3::Generator3</a></div><div class="ttdeci">Generator3()</div><div class="ttdoc">licznik </div><div class="ttdef"><b>Definition:</b> Generator3.cpp:9</div></div>
 <div class="ttc" id="classGenerator3_html_a461d34d597de24d4f3fb2d0582dbdc73"><div class="ttname"><a href="classGenerator3.html#a461d34d597de24d4f3fb2d0582dbdc73">Generator3::getStep</a></div><div class="ttdeci">int getStep()</div><div class="ttdoc">Metoda pobierajaca krok. </div><div class="ttdef"><b>Definition:</b> Generator3.cpp:104</div></div>
 <div class="ttc" id="classGenerator3_html_ad07ce02a3a4253af0d18fc4d07da652d"><div class="ttname"><a href="classGenerator3.html#ad07ce02a3a4253af0d18fc4d07da652d">Generator3::setStep</a></div><div class="ttdeci">void setStep(int)</div><div class="ttdoc">Metoda ustawiająca krok generatora. </div><div class="ttdef"><b>Definition:</b> Generator3.cpp:111</div></div>
 <div class="ttc" id="classGenerator3_html_a031ad6458f193c019538bc890fd57e88"><div class="ttname"><a href="classGenerator3.html#a031ad6458f193c019538bc890fd57e88">Generator3::~Generator3</a></div><div class="ttdeci">~Generator3()</div><div class="ttdoc">Dekonstruktor. </div><div class="ttdef"><b>Definition:</b> Generator3.cpp:25</div></div>
 <div class="ttc" id="classGenerator3_html_ab12aab6f893a507374a3f7af706babf5"><div class="ttname"><a href="classGenerator3.html#ab12aab6f893a507374a3f7af706babf5">Generator3::getSize</a></div><div class="ttdeci">int getSize()</div><div class="ttdoc">Metoda pobierajaca rozmiar. </div><div class="ttdef"><b>Definition:</b> Generator3.cpp:84</div></div>
 <div class="ttc" id="classGenerator3_html_a89928ff47b804aa4af9dfd67c458c92b"><div class="ttname"><a href="classGenerator3.html#a89928ff47b804aa4af9dfd67c458c92b">Generator3::losuj</a></div><div class="ttdeci">void losuj()</div><div class="ttdoc">Metoda losujaca liczby. </div><div class="ttdef"><b>Definition:</b> Generator3.cpp:75</div></div>
 <div class="ttc" id="classGenerator3_html_a1ddc34bcde320baf2548f78667354ce9"><div class="ttname"><a href="classGenerator3.html#a1ddc34bcde320baf2548f78667354ce9">Generator3::setSize</a></div><div class="ttdeci">void setSize(int)</div><div class="ttdoc">Metoda ustawiająca rozmiar. </div><div class="ttdef"><b>Definition:</b> Generator3.cpp:90</div></div>
-<div class="ttc" id="classGenerator3_html_a51a15107777737fbefc69ea25d51bf5e"><div class="ttname"><a href="classGenerator3.html#a51a15107777737fbefc69ea25d51bf5e">Generator3::resetGenerator</a></div><div class="ttdeci">void resetGenerator(int iPoczatek, int iKoniec, int _size, int _step, int _seed)</div><div class="ttdoc">Resetowanie generatora. </div><div class="ttdef"><b>Definition:</b> Generator3.cpp:55</div></div>
 <div class="ttc" id="classGenerator3_html_a8cb1ea0705c811ea15e6526f95b3d220"><div class="ttname"><a href="classGenerator3.html#a8cb1ea0705c811ea15e6526f95b3d220">Generator3::getSeed</a></div><div class="ttdeci">int getSeed()</div><div class="ttdoc">Metoda pobierajaca ziarno. </div></div>
 <div class="ttc" id="classGenerator_html_a235b3d02ce62d19e803cc2295eb7911e"><div class="ttname"><a href="classGenerator.html#a235b3d02ce62d19e803cc2295eb7911e">Generator::iKoniec</a></div><div class="ttdeci">int iKoniec</div><div class="ttdoc">Poczatek przedzialu. </div><div class="ttdef"><b>Definition:</b> Generator.h:26</div></div>
 <div class="ttc" id="classGenerator_html"><div class="ttname"><a href="classGenerator.html">Generator</a></div><div class="ttdoc">Klasa abstrakcyjna generatora. </div><div class="ttdef"><b>Definition:</b> Generator.h:21</div></div>
+<div class="ttc" id="classGenerator3_html_a240980004aee2739b768def7ef71eedd"><div class="ttname"><a href="classGenerator3.html#a240980004aee2739b768def7ef71eedd">Generator3::setGenerator</a></div><div class="ttdeci">void setGenerator()</div><div class="ttdoc">Metoda przygotowujaca generator do uruchomienia. </div><div class="ttdef"><b>Definition:</b> Generator3.cpp:35</div></div>
 <div class="ttc" id="classGenerator3_html_a6c5d102d0e64d72b72e23726f56b8af9"><div class="ttname"><a href="classGenerator3.html#a6c5d102d0e64d72b72e23726f56b8af9">Generator3::setSeed</a></div><div class="ttdeci">void setSeed(int)</div><div class="ttdoc">Metoda ustawiająca ziarno. </div><div class="ttdef"><b>Definition:</b> Generator3.cpp:122</div></div>
+<div class="ttc" id="classGenerator_html_ae77446ccb4946b8eb28d0f20f3e4a95f"><div class="ttname"><a href="classGenerator.html#ae77446ccb4946b8eb28d0f20f3e4a95f">Generator::seed</a></div><div class="ttdeci">int seed</div><div class="ttdoc">Koniec przedzialu. </div><div class="ttdef"><b>Definition:</b> Generator.h:27</div></div>
 <div class="ttc" id="classGenerator3_html"><div class="ttname"><a href="classGenerator3.html">Generator3</a></div><div class="ttdoc">Klasa generatora generatora Fibonacciego. </div><div class="ttdef"><b>Definition:</b> Generator3.h:21</div></div>
+<div class="ttc" id="classGenerator3_html_a5572186e8bb586ecf526f5db2a657c7d"><div class="ttname"><a href="classGenerator3.html#a5572186e8bb586ecf526f5db2a657c7d">Generator3::resetGenerator</a></div><div class="ttdeci">void resetGenerator(int iPoczatek, int iKoniec, int size, int step, int seed)</div><div class="ttdoc">Resetowanie generatora. </div><div class="ttdef"><b>Definition:</b> Generator3.cpp:55</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Wygenerowano Pn, 26 maj 2014 00:42:04 dla Generatory liczb losowych programem &#160;<a href="http://www.doxygen.org/index.html">
+Wygenerowano Pn, 26 maj 2014 01:39:05 dla Generatory liczb losowych programem &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

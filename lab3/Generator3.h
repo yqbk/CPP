@@ -3,7 +3,7 @@
 * \authors Jakub Syrek & Katarzyna Żukowska
 * \date 25.05.2014
 * \version 1.0
-* \brief Plik nagłówkowy z deklarajcą klasy generatora Fibonacciego
+* \brief Plik nagłówkowy z deklarajcą klasy generatora Fibonacciego dziedziczony z "Generator"
 */
 
 #ifndef GENERATOR3_H
@@ -15,7 +15,7 @@
 * \class Generator3
 * \authors Jakub Syrek & Katarzyna Żukowska
 * \date 25.05.2014
-* \brief Klasa generatora generatora Fibonacciego
+* \brief Klasa generatora generatora Fibonacciego dziedziczona z "Generator"
 */
 
 class Generator3 : public Generator
