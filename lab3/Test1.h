@@ -4,7 +4,7 @@
 
 class Test1: public Test
 {
-    protected:
+    protected:							//ZIARNO LOSOWANIA, DO POPRAWY!!!!
 
         int iIloscParzystych;
         int iIloscNieparzystych;

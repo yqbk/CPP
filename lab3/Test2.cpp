@@ -30,9 +30,7 @@ void Test2::testuj()
 
     for (int i = 0; i < this->iIloscLosowan; i++)        
         for (int j = 0; j < count; j++)        
-            if(wyniki[i] == pierwsze[j]) ++iIloscPierwszych;
-   
-    cout << "\n\n" << "Ilosc pierwszych: " << iIloscPierwszych << endl;
+            if(wyniki[i] == pierwsze[j]) ++iIloscPierwszych;   
 }
 
 
@@ -41,4 +39,6 @@ void Test2::print(ostream & output)
    output << "\nTest ilosci liczb pierwszych: \n";
 
    Test::print(output);
+
+   output << "\n\n" << "Ilosc pierwszych: " << iIloscPierwszych << endl;
 }

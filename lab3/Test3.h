@@ -4,7 +4,7 @@
 
 class Test3: public Test
 {
-	protected:
+	private:
 
         int **powtorzenia;
         int max;

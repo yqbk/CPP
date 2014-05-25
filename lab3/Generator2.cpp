@@ -7,13 +7,20 @@ Generator2::Generator2(int iPoczatek, int iKoniec, int seed, int mnoznik, int ad
 {
     this->setPoczatek(iPoczatek);
     this->setKoniec(iKoniec);
-    this->strNazwaGeneratora = strNazwaGeneratora;
-    this->seed = seed;
+    this->setNazwa(strNazwaGeneratora);
+    this->setSeed(seed);
     this->mnoznik = mnoznik;
     this->add = add;
+    this->modul = modul;
 
 
 cout << endl << getSeed() << endl;    
+
+}
+
+
+Generator2::~Generator2()
+{
 
 }
 
@@ -25,8 +32,5 @@ void Generator2::losuj()
 	seed = ((mnoznik * seed) + add) % iKoniec;
 
     this->iWylosowana = seed;
-
-    cout << getWylosowana() << " ";
-
 
 }

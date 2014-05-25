@@ -8,6 +8,8 @@ Test3::Test3(string strNazwaTestu, Generator *wskGenerator, int iIloscLosowan) :
     for (int i = 0; i < iIloscLosowan; ++i)
     {
         powtorzenia[i] = new int[2];
+        powtorzenia[i][0] = 0;
+        powtorzenia[i][1] = 0;
     }
 }
 
@@ -29,7 +31,7 @@ void Test3::testuj()
         powtorzenia[i][1] = 0;
     }
 
-    max = powtorzenia[0][0];
+    max = 0;
     index = 0;
 
     for (int i = 0; i < iIloscLosowan; ++i)
@@ -42,12 +44,10 @@ void Test3::testuj()
             if(powtorzenia[i][1] > max)
             {
                 max = powtorzenia[i][1];
-                index = i;
+                index = i;           
             }
         }
     }
-   
-    cout << "\n\n" << "Najwiecej razy powtorzyla sie liczba: " << wyniki[index] << ", " << max << " razy." << endl;    
 }
 
 
@@ -56,4 +56,6 @@ void Test3::print(ostream & output)
    output << "\nTest najwiekszej liczby powtorzen: \n";
 
    Test::print(output);
+
+   output << "\n\n" << "Najwiecej razy powtorzyla sie liczba: " << wyniki[index] << ", " << max << " razy." << endl; 
 }

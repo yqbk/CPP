@@ -2,12 +2,17 @@
 
 
 
-Generator1::Generator1(int iPoczatek, int iKoniec, string strNazwaGeneratora)
+Generator1::Generator1(int iPoczatek, int iKoniec, int seed, string strNazwaGeneratora)
 {
     this->setPoczatek(iPoczatek);
     this->setKoniec(iKoniec);
     this->strNazwaGeneratora = strNazwaGeneratora;
-    srand(time(NULL));
+    srand(time(seed));
+}
+
+Generator1::~Generator1()
+{
+
 }
 
 void Generator1::losuj()

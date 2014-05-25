@@ -12,13 +12,14 @@ class Generator2 : public Generator
 		int modul;
 		int add;
 
-
     public:
 
         Generator2(int iPoczatek, int iKoniec, int seed, int mnoznik, int add, string strNazwaGeneratora);
+
+        ~Generator2();
 
         void losuj();
 
 };
 
-#endif // GENERATOR2_H
+#endif

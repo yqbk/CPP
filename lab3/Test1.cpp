@@ -10,7 +10,7 @@ Test1::Test1(string strNazwaTestu, Generator *wskGenerator, int iIloscLosowan) :
 
 Test1::~Test1()
 {
-    delete []wyniki;
+
 }
 
 
@@ -30,12 +30,7 @@ void Test1::testuj()
         }
         else
         this->iIloscNieparzystych++;
-
-
     }
-    cout << "\n\n" << "Ilosc parzystych: " << this->iIloscParzystych << endl;
-    cout << "Ilosc nieparzystych: " << this->iIloscNieparzystych << endl;
-
 }
 
 
@@ -44,4 +39,7 @@ void Test1::print(ostream & output)
    output << "\nTest parzyste/nieparzyste: \n";
 
    Test::print(output);
+
+   output << "\n\n" << "Ilosc parzystych: " << this->iIloscParzystych << endl;
+   output << "Ilosc nieparzystych: " << this->iIloscNieparzystych << endl;
 }

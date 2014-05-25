@@ -5,6 +5,8 @@
 
 void multiTesty(Generator *wskGenerator);
 
+void prezentacjaGeneratora(Generator *wskGenerator);
+
 int fib(int); 
 
 #endif

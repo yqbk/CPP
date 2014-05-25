@@ -7,22 +7,27 @@ Test::Test()
     
 }
 
+
 Test::Test(string strNazwaTestu, Generator* wskGenerator, int iIloscLosowan)
 {
 	setGenerator(wskGenerator);	
+
 	setNazwa(strNazwaTestu);
 
 	wyniki = NULL;
 
 	setIloscLosowan(iIloscLosowan);
+
 }
+
 
 Test::~Test()
 {
    clear();
+
    wskGenerator = NULL;
 
-   strNazwaTestu = "";
+   strNazwaTestu = "";              
 
    iIloscLosowan = 0;
 }
@@ -41,6 +46,7 @@ void Test::resize()
          wyniki[i] = 0; 	
    }
 }
+
 
 void Test::clear() 
 {
@@ -63,6 +69,7 @@ void Test::setGenerator(Generator* generator)
 	else
 		this->wskGenerator = generator; 
 }
+
 
 void Test::setIloscLosowan(int n)
 {
@@ -107,15 +114,18 @@ Generator* Test::getGenerator()
 	return wskGenerator;
 }
 
+
 int Test::getIloscLosowan()
 {
 	return iIloscLosowan;
 }
 
+
 string Test::getNazwa()
 {
 	return strNazwaTestu;
 }
+
 
 int Test::getWyniki(int n)
 {

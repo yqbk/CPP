@@ -18,29 +18,29 @@ class Generator3 : public Generator
 
     	Generator3();
 
-        Generator3(int, int, int, int, int );
+      Generator3(int, int, int, int, int, string);
 
-        ~Generator3();
+       ~Generator3();
 
-        void resetGenerator(int, int, int, int, int );
+      void resetGenerator(int, int, int, int, int );
 
-        void losuj();
-
-
-
-        int getSize();
-
-        int getStep();
-
-        int getSeed();
+      void losuj();
 
 
 
-      	void setSize(int);
+      int getSize();
 
-      	void setStep(int);
+      int getStep();
 
-      	void setSeed(int);
+      int getSeed();
+
+
+
+      void setSize(int);
+
+      void setStep(int);
+
+      void setSeed(int);
 
 };
 

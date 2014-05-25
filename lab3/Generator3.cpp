@@ -10,7 +10,7 @@ Generator3::Generator3() : Generator(0,1,0, "Generator Fibonacciego")
    state = NULL;
 }
 
-Generator3::Generator3(int iPoczatek, int iKoniec, int _size, int _step, int _seed) 
+Generator3::Generator3(int iPoczatek, int iKoniec, int _size, int _step, int _seed, string strNazwa) 
 {  
    state = NULL;
    resetGenerator(iPoczatek, iKoniec, _size, _step, _seed);
