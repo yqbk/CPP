@@ -1,20 +1,17 @@
 #include "aghInclude.h"
 
 
-
-Test2::Test2(string strNazwaTestu, int iIloscLosowan, Generator *wskGenerator)
+Test2::Test2(string strNazwaTestu, Generator *wskGenerator, int iIloscLosowan) : Test(strNazwaTestu, wskGenerator, iIloscLosowan)
 {
-    this->strNazwaTestu = strNazwaTestu;
-    this->iIloscLosowan = iIloscLosowan;
-    this->wskGenerator = wskGenerator;
-    this->wyniki = new int[iIloscLosowan];
     this->iIloscPierwszych = 0;
 }
 
+
 Test2::~Test2()
 {
-    delete []wyniki;
+
 }
+
 
 void Test2::testuj()
 {
@@ -36,6 +33,12 @@ void Test2::testuj()
             if(wyniki[i] == pierwsze[j]) ++iIloscPierwszych;
    
     cout << "\n\n" << "Ilosc pierwszych: " << iIloscPierwszych << endl;
+}
 
 
+void Test2::print(ostream & output) 
+{
+   output << "\nTest ilosci liczb pierwszych: \n";
+
+   Test::print(output);
 }

@@ -12,4 +12,4 @@ class Generator1 : public Generator
 
 };
 
-#endif // GENERATOR1_H
+#endif

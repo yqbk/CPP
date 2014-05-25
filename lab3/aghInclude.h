@@ -19,18 +19,22 @@
 #include <math.h>
 
 
-
 using namespace std;
+
 
 #include "aghException.h"
 #include "funkcje.h"
+
 #include "Generator.h"
 #include "Generator1.h"
 #include "Generator2.h"
+#include "Generator3.h"
+
 #include "Test.h"
 #include "Test1.h"
 #include "Test2.h"
 #include "Test3.h"
+#include "Test4.h"
 
 
 

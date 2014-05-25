@@ -1,20 +1,18 @@
 #include "aghInclude.h"
 
 
-Test1::Test1(string strNazwaTestu, int iIloscLosowan, Generator *wskGenerator)
+Test1::Test1(string strNazwaTestu, Generator *wskGenerator, int iIloscLosowan) : Test(strNazwaTestu, wskGenerator, iIloscLosowan)
 {
-    this->strNazwaTestu = strNazwaTestu;
-    this->iIloscLosowan = iIloscLosowan;
-    this->wskGenerator = wskGenerator;
-    this->wyniki = new int[iIloscLosowan];
     this->iIloscParzystych = 0;
     this->iIloscNieparzystych = 0;
 }
+
 
 Test1::~Test1()
 {
     delete []wyniki;
 }
+
 
 void Test1::testuj()
 {
@@ -38,4 +36,12 @@ void Test1::testuj()
     cout << "\n\n" << "Ilosc parzystych: " << this->iIloscParzystych << endl;
     cout << "Ilosc nieparzystych: " << this->iIloscNieparzystych << endl;
 
+}
+
+
+void Test1::print(ostream & output) 
+{
+   output << "\nTest parzyste/nieparzyste: \n";
+
+   Test::print(output);
 }

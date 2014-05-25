@@ -1,13 +1,8 @@
 #include "aghInclude.h"
 
 
-
-Test3::Test3(string strNazwaTestu, int iIloscLosowan, Generator *wskGenerator)
+Test3::Test3(string strNazwaTestu, Generator *wskGenerator, int iIloscLosowan) : Test(strNazwaTestu, wskGenerator, iIloscLosowan)
 {
-    this->strNazwaTestu = strNazwaTestu;
-    this->iIloscLosowan = iIloscLosowan;
-    this->wskGenerator = wskGenerator;
-    this->wyniki = new int[iIloscLosowan];
     powtorzenia = new int*[iIloscLosowan];
 
     for (int i = 0; i < iIloscLosowan; ++i)
@@ -16,16 +11,12 @@ Test3::Test3(string strNazwaTestu, int iIloscLosowan, Generator *wskGenerator)
     }
 }
 
+
 Test3::~Test3()
 {
-    delete []wyniki;
 
-    for (int i = 0; i < iIloscLosowan; ++i)
-    {
-       delete [] powtorzenia[i];
-    }
-    delete [] powtorzenia;
 }
+
 
 void Test3::testuj()
 {
@@ -36,11 +27,7 @@ void Test3::testuj()
 
         powtorzenia[i][0] = wyniki[i];
         powtorzenia[i][1] = 0;
-
     }
-
-    int max;
-    int index;
 
     max = powtorzenia[0][0];
     index = 0;
@@ -57,11 +44,16 @@ void Test3::testuj()
                 max = powtorzenia[i][1];
                 index = i;
             }
-
         }
     }
    
-    cout << "\n\n" << "Najwiecej razy powtorzyla sie liczba: " << wyniki[index] << ", " << max << " razy." << endl;
+    cout << "\n\n" << "Najwiecej razy powtorzyla sie liczba: " << wyniki[index] << ", " << max << " razy." << endl;    
+}
 
 
+void Test3::print(ostream & output) 
+{
+   output << "\nTest najwiekszej liczby powtorzen: \n";
+
+   Test::print(output);
 }

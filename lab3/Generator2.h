@@ -15,7 +15,7 @@ class Generator2 : public Generator
 
     public:
 
-        Generator2(int iPoczatek, int iKoniec, int seed, int mnoznik, int add, int modul, string strNazwaGeneratora);
+        Generator2(int iPoczatek, int iKoniec, int seed, int mnoznik, int add, string strNazwaGeneratora);
 
         void losuj();
 
