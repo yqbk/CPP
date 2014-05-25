@@ -16,8 +16,6 @@ class Generator2 : public Generator
 
         Generator2(int iPoczatek, int iKoniec, unsigned long long seed, unsigned long long mnoznik, unsigned long long add, unsigned long long modul, string strNazwaGeneratora);
 
-        unsigned long long LCG(unsigned long long mnoznik, unsigned long long  seed, unsigned long long modul);
-
         ~Generator2();
 
         void losuj();

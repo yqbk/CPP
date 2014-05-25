@@ -7,7 +7,7 @@ Generator1::Generator1(int iPoczatek, int iKoniec, int seed, string strNazwaGene
     this->setPoczatek(iPoczatek);
     this->setKoniec(iKoniec);
     this->strNazwaGeneratora = strNazwaGeneratora;
-    srand(time(seed));
+    srand(time(NULL));
 }
 
 Generator1::~Generator1()

@@ -4,6 +4,10 @@
 
 class Test4: public Test 
 {
+	private:
+
+		double *wynikiFib = NULL;
+
    	public:
 
       	Test4(string strNazwaTestu, Generator* wskGenerator, int iIloscLosowan);
@@ -13,7 +17,6 @@ class Test4: public Test
       	void testuj(void);
 
       	void print(ostream& = cout);
-
 };
 
 #endif 

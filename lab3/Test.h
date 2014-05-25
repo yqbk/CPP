@@ -93,12 +93,12 @@ class Test
         void setNazwa(string strNazwaTestu);
 
        /**
-       * @brief Metoda ustawiajaca wynik o danym indeksie
+       * @brief Metoda ustawiajaca wynik o danym indeksie - wirtualna
        * @param n - nr indeksu
        * @param value - wartosc
        * @return Nic nie zwraca 
        */
-        void setWyniki(int n, int value);
+        virtual void setWyniki(int n, int value);
 
 
 // ---------------------------------------------------------
@@ -110,10 +110,10 @@ class Test
         int getWyniki(int n);
 
        /**
-       * @brief Metoda pobierajaca ilosc losowan
+       * @brief Metoda pobierajaca ilosc losowan - wirtualna
        * @return Ilosc losowan
        */
-        int getIloscLosowan();
+        virtual int getIloscLosowan();
 
        /**
        * @brief Metoda pobierajaca nazwe testu
