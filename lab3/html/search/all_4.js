@@ -7,7 +7,6 @@ var searchData=
   ['generator2',['Generator2',['../classGenerator2.html',1,'Generator2'],['../classGenerator2.html#a3dfa71293f5dd70d1cf3a30d7676d043',1,'Generator2::Generator2()']]],
   ['generator2_2eh',['Generator2.h',['../Generator2_8h.html',1,'']]],
   ['generator3',['Generator3',['../classGenerator3.html',1,'Generator3'],['../classGenerator3.html#a6817e5557639442bef9bc31993b8ba59',1,'Generator3::Generator3()'],['../classGenerator3.html#a09577a1241a84b682f2b0a8fab79a04c',1,'Generator3::Generator3(int iPoczatek, int iKoniec, int size, int step, int seed, string strNazwa)']]],
-  ['generator3_2eh',['Generator3.h',['../Generator3_8h.html',1,'']]],
   ['getgenerator',['getGenerator',['../classTest.html#acb5c11856190eff9b99ea410f0f56827',1,'Test']]],
   ['getilosclosowan',['getIloscLosowan',['../classTest.html#a30725cdceb028622bc8b87f32d0f97e1',1,'Test']]],
   ['getkoniec',['getKoniec',['../classGenerator.html#ad5b35e58608e17ad7ca86b36926a3bbe',1,'Generator']]],

@@ -24,6 +24,7 @@ Generator3::Generator3(int iPoczatek, int iKoniec, int size, int step, int seed,
 
 Generator3::~Generator3() 
 {
+
    if(wynikiGen != NULL)
       delete[] wynikiGen;
 
@@ -94,7 +95,7 @@ void Generator3::setSize(int size)
 
    else 
    {
-      size = size;
+      this->size = size;
       setGenerator();     
    }
 

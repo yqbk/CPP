@@ -1,5 +1,5 @@
 /**
-* \file Generator3.h
+* \file Generator3Z.h
 * \authors Jakub Syrek & Katarzyna Żukowska
 * \date 25.05.2014
 * \version 1.0
@@ -28,6 +28,12 @@ class Generator3 : public Generator
 
       static int i;   ///licznik
 
+       /**
+       * @brief Metoda przygotowujaca generator do uruchomienia
+       * @return Nic nie zwraca 
+       */
+      void setGenerator();
+
 
     public:
 // ---------------------------------------------------------
@@ -53,11 +59,7 @@ class Generator3 : public Generator
        ~Generator3();
 
 // ---------------------------------------------------------
-       /**
-       * @brief Metoda przygotowujaca generator do uruchomienia
-       * @return Nic nie zwraca 
-       */
-      void setGenerator();
+
 
        /**
        * @brief Resetowanie generatora
