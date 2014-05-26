@@ -1,5 +1,5 @@
 /**
-* \file Generator3Z.h
+* \file Generator3.h
 * \authors Jakub Syrek & Katarzyna Żukowska
 * \date 25.05.2014
 * \version 1.0

@@ -30,7 +30,7 @@ digraph "aghInclude.h"
   Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
   Node13 [label="Generator2.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Generator2_8h.html",tooltip="Plik nagłówkowy z deklarajcą klasy generatora Multiplikatywnego LCG dziedziczony po klasie Generator..."];
   Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
-  Node14 [label="Generator3.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Generator3_8h_source.html"];
+  Node14 [label="Generator3.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Generator3_8h.html",tooltip="Plik nagłówkowy z deklarajcą klasy generatora Fibonacciego dziedziczony po klasie Generator..."];
   Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
   Node15 [label="Test.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Test_8h.html",tooltip="Plik nagłówkowy z deklarajcą klasy abstrakcyjnej testu. "];
   Node1 -> Node16 [color="midnightblue",fontsize="10",style="solid"];
