@@ -42,6 +42,12 @@ class Generator1 : public Generator
        */
         void losuj();
 
+       /**
+       * @brief Metoda ustawiajaca seed - dla generatora wbudowanego
+       * @return Nic nie zwraca 
+       */
+        void setSeed(int seed);
+
 };
 
 // ---------------------------------------------------------

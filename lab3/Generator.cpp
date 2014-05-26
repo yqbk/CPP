@@ -42,38 +42,38 @@ void Generator::setSeed(int seed)
 }
 
 // ---------------------------------------------------------
-int Generator::getPoczatek()
+int Generator::getPoczatek() const
 {
     return iPoczatek;
 }
 
-int Generator::getKoniec()
+int Generator::getKoniec() const
 {
     return iKoniec;
 }
 
-string Generator::getNazwa()
+string Generator::getNazwa() const
 {
     return strNazwaGeneratora;
 }
 
-int Generator::getWylosowana()
+int Generator::getWylosowana() const
 {
     return iWylosowana;
 }
 
-int Generator::getSeed()
+int Generator::getSeed() const
 {
     return seed;
 }
 
 // ---------------------------------------------------------
-void Generator::print(ostream & output) 
+void Generator::print(ostream & output) const 
 {
   output << " " << getWylosowana() << " " ; 
 }
 
-void Generator::nazwa(ostream & output)
+void Generator::nazwa(ostream & output) const
 {
 	output << "\n\n" << getNazwa() << "\n" ; 
 }

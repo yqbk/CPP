@@ -23,10 +23,10 @@ class Generator2 : public Generator
 
 	private:
 
-		unsigned long long x;			///wartosc x liczby
-		unsigned long long mnoznik;		///mnoznik
-		unsigned long long modul;		///modul z liczby
-		unsigned long long add;			///liczba ktora dodajemy
+		unsigned long x;			///wartosc x liczby
+		unsigned long mnoznik;		///mnoznik
+		unsigned long modul;		///modul z liczby
+		unsigned long add;			///liczba ktora dodajemy
 
     public:
 
@@ -40,7 +40,7 @@ class Generator2 : public Generator
        * @param modul - modul z liczby
        * @param strNazwaGeneratora - nazwa generatora
        */
-        Generator2(int iPoczatek, int iKoniec, unsigned long long seed, unsigned long long mnoznik, unsigned long long add, unsigned long long modul, string strNazwaGeneratora);
+        Generator2(int iPoczatek, int iKoniec, unsigned long seed, unsigned long mnoznik, unsigned long add, unsigned long modul, string strNazwaGeneratora);
 
        /**
        * @brief Konstruktor parametrowy
@@ -53,7 +53,7 @@ class Generator2 : public Generator
        * @param strNazwaGeneratora - nazwa generatora
        * @return Zwraca wylosowana liczbe (bez przedzialow)
        */
-        unsigned long long LCG(unsigned long long mnoznik, unsigned long long  seed, unsigned long long modul);
+        unsigned long LCG(unsigned long mnoznik, unsigned long  seed, unsigned long modul);
 
        /**
        * @brief Dekonstruktor

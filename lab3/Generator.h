@@ -93,44 +93,44 @@ class Generator
        * @brief Metoda pobierajaca poczatek przedzialu
        * @return Poczatek przedzialu
        */
-        int getPoczatek();
+        int getPoczatek() const;
 
        /**
        * @brief Metoda pobierajaca koniec przedzialu
        * @return Koniec przedzialu
        */
-        int getKoniec();
+        int getKoniec() const;
 
        /**
        * @brief Metoda pobierajaca ziarno
        * @return Ziarno
        */
-        int getSeed();
+        int getSeed() const;
 
        /**
        * @brief Metoda pobierajaca wylosowana liczbe
        * @return Wylosowana liczba
        */
-        int getWylosowana();
+        int getWylosowana() const;
 
        /**
        * @brief Metoda pobierajaca nazwe generatora
        * @return Nazwa generatora
        */
-        string getNazwa();
+        string getNazwa() const;
 
 // ---------------------------------------------------------
        /**
        * @brief Metoda wypisujaca nazwe generatora do strumienia
        * @return Nic nie zwraca
        */
-        void nazwa(ostream & = cout);
+        void nazwa(ostream & = cout) const;
 
        /**
        * @brief Metoda wypisujaca wylosowana liczbe do strumienia
        * @return Nic nie zwraca
        */
-        void print(ostream & = cout);        
+        void print(ostream & = cout) const;        
 
 
 };

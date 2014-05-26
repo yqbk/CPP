@@ -41,7 +41,7 @@ void Test2::testuj()
 }
 
 // ---------------------------------------------------------
-void Test2::print(ostream & output) 
+void Test2::print(ostream & output) const 
 {
    output << "\nTest ilosci liczb pierwszych: \n";
 

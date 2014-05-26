@@ -52,7 +52,7 @@ void Test3::testuj()
 }
 
 // ---------------------------------------------------------
-void Test3::print(ostream & output) 
+void Test3::print(ostream & output) const 
 {
    output << "\nTest najwiekszej liczby powtorzen: \n";
 

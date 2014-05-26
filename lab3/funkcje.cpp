@@ -5,20 +5,21 @@
 // ---------------------------------------------------------
 int fib(int n) 
 {
-    if(n == 0) return 0;
-    if(n == 1) return 1;
+    if (n < 0)
+        throw aghException(1, "Niepoprawne dane wejsciowe", __FILE__, __LINE__);
 
-    return fib(n-1) + fib(n-2);
+    else
+    {
+        if(n == 0) return 0;
+        if(n == 1) return 1;
+
+        return fib(n-1) + fib(n-2);
+    }
 }
 
 // ---------------------------------------------------------
-void prezentacjaGeneratora(Generator *wskGenerator)
+void prezentacjaGeneratora(Generator *wskGenerator, ostream & plik)
 {
-    ofstream plik;
-    plik.open("plik.txt", ios::app);
-
-    if( plik.good() == true )
-    {
         plik << "\n\n******************************************************";
         cout << "\n\n******************************************************";
 
@@ -31,18 +32,11 @@ void prezentacjaGeneratora(Generator *wskGenerator)
             wskGenerator->print(plik);
             wskGenerator->print();
         }    
-    }
 }
 
 // ---------------------------------------------------------
-void multiTesty(Generator *wskGenerator)
+void multiTesty(Generator *wskGenerator, ostream & plik)
 {
-    ofstream plik;
-    plik.open("plik.txt", ios::app);
-
-    if( plik.good() == true )
-    {
-	
 	    cout << "\n\n------------------------------------------------------";
 	    cout << "\nTesty dla: " << wskGenerator->getNazwa() << "\n";
 
@@ -74,8 +68,7 @@ void multiTesty(Generator *wskGenerator)
 
         cout << "\n------------------------------------------------------";
         plik << "\n------------------------------------------------------";
-   
-    }
+
 }
 
 // ---------------------------------------------------------

@@ -35,7 +35,7 @@ void Test1::testuj()
 }
 
 // ---------------------------------------------------------
-void Test1::print(ostream & output) 
+void Test1::print(ostream & output) const
 {
    output << "\nTest parzyste/nieparzyste: \n";
 

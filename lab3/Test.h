@@ -106,25 +106,25 @@ class Test
        * @param n - nr indeksu
        * @return Poczatek przedzialu
        */
-        int getWyniki(int n);
+        int getWyniki(int n) const;
 
        /**
        * @brief Metoda pobierajaca ilosc losowan - wirtualna
        * @return Ilosc losowan
        */
-        virtual int getIloscLosowan();
+        virtual int getIloscLosowan() const; 
 
        /**
        * @brief Metoda pobierajaca nazwe testu
        * @return Nazwa testu
        */
-        string getNazwa();
+        string getNazwa() const;
 
        /**
        * @brief Metoda pobierajaca wskaznik na generator
        * @return Wskaznik na generator
        */
-        Generator* getGenerator();
+        Generator* getGenerator() const;
 
         /*
         int getSampleSize(void);
@@ -140,7 +140,7 @@ class Test
        * @brief Metoda wypisujaca wyniki do strumienia
        * @return Nic nie zwraca
        */
-        virtual void print(ostream & = cout);
+        virtual void print(ostream & = cout)  const;
         
 
 };

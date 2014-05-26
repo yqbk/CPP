@@ -17,15 +17,19 @@
 
 /**
 * @brief Funkcja przeprowadzajaca wszystkie testy
+* @param wskGenerator - wskaznik na generator
+* @param plik - plik zapisu wynikow
 * @return Nic nie zwraca
 */
-void multiTesty(Generator *wskGenerator);
+void multiTesty(Generator *wskGenerator, ostream & plik);
 
 /**
 * @brief Funkcja prezentująca generator
+* @param wskGenerator - wskaznik na generator
+* @param plik - plik zapisu wynikow
 * @return Nic nie zwraca
 */
-void prezentacjaGeneratora(Generator *wskGenerator);
+void prezentacjaGeneratora(Generator *wskGenerator, ostream & plik);
 
 /**
 * @brief Funkcja ciag fibonacciego

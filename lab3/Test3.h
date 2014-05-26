@@ -51,7 +51,7 @@ class Test3: public Test
        * @brief Metoda wypisujaca wyniki do strumienia
        * @return Nic nie zwraca
        */
-        void print(ostream& = cout);
+        void print(ostream& = cout) const;
 
 };
 

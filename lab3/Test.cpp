@@ -97,7 +97,7 @@ void Test::setNazwa(string strNazwaTestu)
 
 void Test::setWyniki(int n, int value)
 {
-	if(n > iIloscLosowan || wyniki == NULL)
+	if(n > iIloscLosowan - 1 || wyniki == NULL)
 	{
 		cout << "--4";
 		throw aghException(0, "Nie ma wynikow lub zly index", __FILE__, __LINE__);		
@@ -109,25 +109,25 @@ void Test::setWyniki(int n, int value)
 
 
 // ---------------------------------------------------------
-Generator* Test::getGenerator()
+Generator* Test::getGenerator() const
 {
 	return wskGenerator;
 }
 
 
-int Test::getIloscLosowan()
+int Test::getIloscLosowan() const
 {
 	return iIloscLosowan;
 }
 
 
-string Test::getNazwa()
+string Test::getNazwa() const
 {
 	return strNazwaTestu;
 }
 
 
-int Test::getWyniki(int n)
+int Test::getWyniki(int n) const
 {
 	if(wyniki == NULL || n > iIloscLosowan)
 	{
@@ -142,7 +142,7 @@ int Test::getWyniki(int n)
 
 
 // ---------------------------------------------------------
-void Test::print(ostream & output) 
+void Test::print(ostream & output) const
 {
 	for (int i = 0; i < iIloscLosowan; ++i)	
 		output << " " << getWyniki(i) << " " ;	

@@ -60,7 +60,7 @@ void Test4::testuj()
 }
 
 // ---------------------------------------------------------
-void Test4::print(ostream & output) 
+void Test4::print(ostream & output) const
 {
    output << "\nTest Pi: \n";
 
