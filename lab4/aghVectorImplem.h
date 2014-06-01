@@ -81,10 +81,10 @@ void aghVector<T>::resize(int nowyRozmiar)
                     dane[i].~T(); 
             
 
-            for(int i = 0; i < nowyRozmiar && i < size(); i++)       
-                temp[i] = dane[i];
+            //for(int i = 0; i < nowyRozmiar && i < size(); i++)       
+            //    temp[i] = dane[i];
 
-            //memcpy(temp, dane, nowyRozmiar*sizeof(T) ); 
+            memcpy(temp, dane, nowyRozmiar*sizeof(T) ); 
             
             this->kasuj();
         }                       
