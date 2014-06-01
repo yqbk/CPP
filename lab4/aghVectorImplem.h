@@ -26,13 +26,7 @@ aghVector<T>::aghVector(aghContainer<T> const & other)
     
     resize(iRozmiar);
 
-    for(int i=0; i<other.size(); i++)
-    {
-        this->append(other[i]);
-
-        if(wolneMiejsce() == 0)
-            powieksz();
-    }
+    this->aghContainer<T>::operator =(other);
 }
 
 template<class T>
@@ -74,15 +68,10 @@ void aghVector<T>::resize(int nowyRozmiar)
         if(dane != NULL) 
         {
             int roznica = nowyRozmiar - size();
-
             
             if (roznica < 0)      
                 for (int i = size(); i > nowyRozmiar ; --i)                
                     dane[i].~T(); 
-            
-
-            //for(int i = 0; i < nowyRozmiar && i < size(); i++)       
-            //    temp[i] = dane[i];
 
             memcpy(temp, dane, nowyRozmiar*sizeof(T) ); 
             
