@@ -21,7 +21,7 @@ void aghContainer<T>::append(T const& element)
 
 //------------------------------------------------------------------------
 template<class T>
-bool aghContainer<T>::replace(int index, T const& element)
+bool aghContainer<T>::replace(int index, T const & element)
 {
 
 	bool wynik = false;
@@ -34,7 +34,7 @@ bool aghContainer<T>::replace(int index, T const& element)
     	wynik = remove(index);
 
     	if(wynik)
-        	insert(index, element);        	// <--
+        	insert(index, element);        	
     }
 
     return wynik;
@@ -42,14 +42,15 @@ bool aghContainer<T>::replace(int index, T const& element)
 
 
 //------------------------------------------------------------------------
-template<class T>
-void aghContainer<T>::clear(void)
-{
-	if( isEmpty() ) 
-      throw aghException(0, "Operacja nie powiodla sie", __FILE__, __LINE__);
-
-  	else
-    	while (remove(size()));
+template<class T> void aghContainer<T>::clear(void) {
+   if(isEmpty()) {
+      throw aghException(0, "Operation failed", __FILE__, __LINE__);
+   } else {
+      int length = size();
+      for(int i = length; i > 0; i--)
+         remove(i);
+   }
+   return;
 }
 
 //------------------------------------------------------------------------
@@ -61,7 +62,7 @@ bool aghContainer<T>::isEmpty(void) const
 
 
 //------------------------------------------------------------------------
-template<class T>
+template<class T>   ///nie wiem
 int aghContainer<T>::indexOf(T const& _value, int _from) const
 {
 	int wynik = -1;    
@@ -80,7 +81,7 @@ int aghContainer<T>::indexOf(T const& _value, int _from) const
 
 
 //------------------------------------------------------------------------
-template<class T>
+template<class T>	// ?????
 bool aghContainer<T>::contains(T const& _value, int _from) const
 {
 	bool wynik = false;
@@ -100,7 +101,8 @@ bool aghContainer<T>::contains(T const& _value, int _from) const
 //------------------------------------------------------------------------
 //------------------------------------------------------------------------
 template<class T>
-aghContainer<T> & aghContainer<T>::operator=(aghContainer<T> const & right)
+aghContainer<T> const & aghContainer<T>::operator=(aghContainer<T> const & right)
+
 {
 	if(this != &right)
 	{
@@ -177,7 +179,7 @@ aghContainer<T> & aghContainer<T>::operator<<(aghContainer<T> const& right)
 
 
 //------------------------------------------------------------------------
-/*
+
 template<class U> ostream& operator<<(ostream& stream, aghContainer<U> const& right) {
    for(int i = 0; i < right.size(); i++) {
       stream << right[i];
@@ -186,7 +188,7 @@ template<class U> ostream& operator<<(ostream& stream, aghContainer<U> const& ri
    return stream;
 }
 
-*/
+
 //------------------------------------------------------------------------
 
 template<class T>

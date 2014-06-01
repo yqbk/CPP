@@ -42,9 +42,9 @@ class aghContainer
         aghContainer<T> & operator=(T const& element);
 
 
-        bool operator==(aghContainer<T> const& right);
+        bool operator==(aghContainer<T> const& right) const;
 
-        bool operator!=(aghContainer<T> const& right);
+        bool operator!=(aghContainer<T> const& right) const;
 
 
         aghContainer<T>& operator+=(aghContainer<T> const& right);
@@ -56,7 +56,7 @@ class aghContainer
 
         aghContainer<T>& operator<<(aghContainer<T> const& right);
 
-        ostream& operator<<(ostream&, aghContainer<T> const& right);
+        //ostream& operator<<(ostream&, aghContainer<T> const& right);
 
 
         T& operator[](int n) const;
