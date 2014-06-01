@@ -10,24 +10,33 @@ class aghVector : public aghContainer<T>
 
     private:
 
-        T *vector;
-        unsigned int iRozmiar;
-        unsigned int iMaxRozmiar;
-        void resize(unsigned int iRozmiar);
+        T *dane;
+        int iRozmiar;
+        int count;
+
+        void resize(int nowyRozmiar);
+
+        void kasuj();
+
+        void powieksz();
+
+        int wolneMiejsce();
 
     public:
 
         aghVector();
 
-      	aghVector(aghVector<T> const & other); // ???
+        aghVector(aghVector<T> const & kopia);
 
-      	aghVector(aghContainer<T> const & other); // ???
+      	//aghVector(aghVector<T> const & other); // ???
+
+      	aghVector(aghContainer<T> const & other);
 
       	~aghVector();
 
 //------------------------------------------------------------------------
 
-        bool insert(int, T const&);  //wstawianie elementu do pojemnika
+        bool insert(int, T const &);  //wstawianie elementu do pojemnika
 
         T& at(int) const;  //Metoda zwracaj¹ca wartoœæ elementu
 
@@ -36,7 +45,9 @@ class aghVector : public aghContainer<T>
         bool remove(int);   //Metoda usuwaj¹ca wybrany element
 
 //------------------------------------------------------------------------
-        aghVector<T> const & operator=(aghVector const &);
+
+
+        //aghVector<T> const & operator=(aghVector const &);
 
 
 };

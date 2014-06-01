@@ -6,36 +6,22 @@ void showTestResult(int, bool);
 
 int main(void)
 {
-
-   aghVector<int> mama;
-   aghVector<int> tata = mama;
     cout << "main by kk. Last updated 15.04.2013\n";
 
     aghVector<aghVector<int> > a;
     aghContainer<int>* c1 = new aghVector<int>;
     aghContainer<int>* c2;
-    //a << *((aghVector<int>*)c1);
-
-  
+    a << *((aghVector<int>*)c1);
 
     // 1st test - dodawanie do pojemnika stalych, zmiennych, tymczasowych
-
     c1->append(3);
-    cout <<  "\n\nrozmiar append : " << c1->size() << endl;
-
     c1->insert(0, 1+1);
-    cout <<  "\n\nrozmiar : " << c1->size() << endl;
-    
     c1->insert(c1->size(), c1->size());
-    cout <<  "\n\nrozmiar : " << c1->size() << endl;
 
     bool t1 = c1->size() == 3;
-    /*
     int ttab1[] = {2, 3, 2};
     for(int i=0;i<3;i++)
         t1 = t1 && (ttab1[i] == c1->at(i));
-    */
-    cout << "\n" << c1->size() << endl;
     showTestResult(1, t1);
 
     // 2nd test - konstruktor
@@ -45,7 +31,7 @@ int main(void)
     for(int i=0;i<3;i++)
         t2 = t2 && (ttab2[i] == c2->at(i));
     showTestResult(2, t2);
- 
+
     // 3rd test - odwolania
     try
     {
@@ -100,7 +86,7 @@ int main(void)
     // 10th test - metoda contains
     showTestResult(10, !c1->contains(-6));
 
-/*
+
     // 11th test - operacje na pojemniku w pojemniku
     for(int i=3;i>=0;i--)
         a.at(0) += i+1;
@@ -119,10 +105,10 @@ int main(void)
     showTestResult(12, a.at(0).isEmpty());
 
     // 13th test - dzialanie operatora przypisania
-    *c2  = a.at(0) = *c1;
+    //*c2  = 
+    a.at(0) = *c1;
     showTestResult(13, *c1 == a.at(0));
 
-*/
     // 14th test - operator przypisania
     try
     {
@@ -146,18 +132,17 @@ int main(void)
         showTestResult(15, false);
     }
 
-
-
     cout << "Finally, this is the end...\n";
 
     return 0;
 }
 // ---------------------------------------------------------
 
-void showTestResult(int _ti, bool _r) {
-   if(_r)
-      cout << "Test" << _ti << " PASSED\n";
-   else
-      cout << "Test" << _ti << " FAILED\n";
+void showTestResult(int _ti, bool _r)
+{
+    if(_r)
+        cout << "Test" << _ti << " PASSED\n";
+    else
+        cout << "Test" << _ti << " FAILED\n";
 }
 // ---------------------------------------------------------
