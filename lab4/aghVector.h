@@ -43,7 +43,7 @@ class aghVector : public aghContainer<T>
         bool remove(int);   //Metoda usuwaj¹ca wybrany element
 
 //------------------------------------------------------------------------
-
+aghVector<T>& operator=(aghVector<T> const& right);
 
 
 };

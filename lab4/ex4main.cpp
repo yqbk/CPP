@@ -66,9 +66,11 @@ int main(void)
 
     *c1 << 4 << 2+3;
 
-     
+
+    
     c1->remove(2);
 
+ 
     int ttab4[] = {0, 1, 3, 4, 4, 5};
     bool t4 = c1->size() == 6;
     for(int i=0;t4 && i<6;i++)
