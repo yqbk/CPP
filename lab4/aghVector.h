@@ -28,8 +28,6 @@ class aghVector : public aghContainer<T>
 
         aghVector(aghVector<T> const & kopia);
 
-      	//aghVector(aghVector<T> const & other); // ???
-
       	aghVector(aghContainer<T> const & other);
 
       	~aghVector();
@@ -46,8 +44,6 @@ class aghVector : public aghContainer<T>
 
 //------------------------------------------------------------------------
 
-
-        //aghVector<T> const & operator=(aghVector const &);
 
 
 };

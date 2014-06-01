@@ -25,7 +25,11 @@ int main(void)
     showTestResult(1, t1);
 
     // 2nd test - konstruktor
+
     c2 = new aghVector<int>(*c1);
+
+
+
     bool t2 = c2->size() == 3;
     int ttab2[] = {2, 3, 2};
     for(int i=0;i<3;i++)
@@ -53,9 +57,16 @@ int main(void)
 
     // 4th test - usuwanie z pojemnika
     c1->clear();
+
+
+  
     for(int i=0;i<5;i++)
         *c1 += i;
+
+
     *c1 << 4 << 2+3;
+
+     
     c1->remove(2);
 
     int ttab4[] = {0, 1, 3, 4, 4, 5};
@@ -105,8 +116,7 @@ int main(void)
     showTestResult(12, a.at(0).isEmpty());
 
     // 13th test - dzialanie operatora przypisania
-    //*c2  = 
-    a.at(0) = *c1;
+    *c2  = a.at(0) = *c1;
     showTestResult(13, *c1 == a.at(0));
 
     // 14th test - operator przypisania

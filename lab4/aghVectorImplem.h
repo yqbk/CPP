@@ -15,38 +15,24 @@ aghVector<T>::aghVector()
 
 }
 
-template<class T>
-aghVector<T>::aghVector(aghVector<T> const & kopia) 
-{
-   *this = kopia;
-}
-
-/*
-template<class T>
-aghVector<T>::aghVector(aghVector<T> const & other) 
-{
-    dane = NULL;
-    iRozmiar = 0;
-    count = 0;    
-
-
-    this->aghContainer<T>::operator =(other);
-}
-*/
 
 template<class T>
 aghVector<T>::aghVector(aghContainer<T> const & other) 
 {
 
     dane = NULL;
-    iRozmiar = 0;
+    iRozmiar = 10;
     count = 0;   
+    
+    resize(iRozmiar);
 
-    //resize(iRozmiar); 
+    for(int i=0; i<other.size(); i++)
+    {
+        this->append(other[i]);
 
-    //*this = other;
-   //this->aghContainer<T>::operator =(other);
-
+        if(wolneMiejsce() == 0)
+            powieksz();
+    }
 }
 
 template<class T>
@@ -77,28 +63,37 @@ template<class T>
 void aghVector<T>::resize(int nowyRozmiar)
 {
     if(nowyRozmiar < 0)
-    {
-        cout << "\n\n blad resize\n";
-      throw aghException(3, "Blad pamieci", __FILE__, __LINE__);
-    }
+      throw aghException(3, "Blad pamieci", __FILE__, __LINE__);    
 
     else
     {
         T *temp = new T[nowyRozmiar];
 
+        int ileEl = size() < nowyRozmiar ? size() : nowyRozmiar;
+
         if(dane != NULL) 
         {
+            int roznica = nowyRozmiar - size();
+
+            
+            if (roznica < 0)      
+                for (int i = size(); i > nowyRozmiar ; --i)                
+                    dane[i].~T(); 
+            
+
             for(int i = 0; i < nowyRozmiar && i < size(); i++)       
                 temp[i] = dane[i];
+
+            //memcpy(temp, dane, nowyRozmiar*sizeof(T) ); 
             
             this->kasuj();
-        }
-
-        //memcpy(temp, dane, nowyRozmiar*sizeof(T) );                
+        }                       
     
         this->iRozmiar = nowyRozmiar;
-        this->count = size() < nowyRozmiar ? size() : nowyRozmiar;  
+        this->count = ileEl;        
         this->dane = temp;
+
+
     }
 }
 
@@ -137,13 +132,12 @@ bool aghVector<T>::insert(int index, T const& element)
 {
     if( (index < 0) || (index >= iRozmiar) ) 
         throw aghException(1, "Niepoprawny index", __FILE__, __LINE__);
+
     else
     {
-        if( wolneMiejsce() == 0)
-        {
+        if( wolneMiejsce() == 0)            
             powieksz();
-            cout << "\n\nPowiekszam...\n";
-        }
+
 
         for (int i = index + 1; i <= size(); ++i)         
             dane[i] = dane[i-1];    
@@ -161,8 +155,9 @@ bool aghVector<T>::insert(int index, T const& element)
 template<class T>
 bool aghVector<T>::remove(int index) 
 {   
-    if( (index < 0) || (index >= iRozmiar) ) 
-        throw aghException(1, "Niepoprawny index", __FILE__, __LINE__);
+    if( (index < 0)) 
+        //throw aghException(1, "Niepoprawny index", __FILE__, __LINE__);
+        cout << "\ntralala\n";
 
     else
     {
@@ -171,7 +166,7 @@ bool aghVector<T>::remove(int index)
             for (int i = index; i < size(); ++i)
                 dane[i] = dane[i+1];
 
-            dane[size()].~T();  //!!!!!!!  -1
+            dane[size() - 1].~T(); 
 
             resize(iRozmiar - 1);
             count--;
