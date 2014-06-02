@@ -12,14 +12,11 @@ aghVector<T>::aghVector()
     count = 0;    
 
     resize(iRozmiar);
-
 }
-
 
 template<class T>
 aghVector<T>::aghVector(aghContainer<T> const & other) 
 {
-
     dane = NULL;
     iRozmiar = 1;
     count = 0;   
@@ -35,7 +32,6 @@ aghVector<T>::~aghVector()
     kasuj();
 }
 
-
 //------------------------------------------------------------------------
 template<class T>
 void aghVector<T>::powieksz()
@@ -50,9 +46,7 @@ int aghVector<T>::wolneMiejsce()
     return iRozmiar - count;
 }
 
-
 //------------------------------------------------------------------------
-
 template<class T>
 void aghVector<T>::resize(int nowyRozmiar)
 {
@@ -81,12 +75,8 @@ void aghVector<T>::resize(int nowyRozmiar)
         this->iRozmiar = nowyRozmiar;
         this->count = ileEl;        
         this->dane = temp;
-
-
     }
 }
-
-
 
 template<class T>
 void aghVector<T>::kasuj()
@@ -108,30 +98,32 @@ int aghVector<T>::size() const
 template<class T>
 T& aghVector<T>::at(int index) const
 {
-    if( (index < 0) || (index >= iRozmiar) ) 
+    if( (index < 0) || (index >= size()) ) 
         throw aghException(1, "Niepoprawny index", __FILE__, __LINE__);
 
     else
         return dane[index];   
 }
 
-
 template<class T>
 bool aghVector<T>::insert(int index, T const& element)
 {
-    if( (index < 0)) 
+    if( (index < 0) || (index > iRozmiar)) 
         throw aghException(1, "Niepoprawny index", __FILE__, __LINE__);
 
     else
     {
-        if(index > iRozmiar)
-            for (int i = 0; i < index - iRozmiar; ++i)
-                powieksz();
+        if( wolneMiejsce() <= 0)  
+		{    
+			if(wolneMiejsce() == 0)
+				powieksz();			
 
-        if( wolneMiejsce() == 0)            
-            powieksz();
-
-
+			else			
+				for( int i = 0; i < (iRozmiar - count); i++)			
+            			powieksz();			
+			
+		}
+	
         for (int i = index + 1; i <= size(); ++i)         
             dane[i] = dane[i-1];    
         
@@ -148,61 +140,58 @@ bool aghVector<T>::insert(int index, T const& element)
 template<class T>
 bool aghVector<T>::remove(int index) 
 {   
-    if( (index < 0)) 
-        //throw aghException(1, "Niepoprawny index", __FILE__, __LINE__);
-        cout << "\ntralala\n";
+    if( (index < 0) || index > iRozmiar) 
+        throw aghException(1, "Niepoprawny index", __FILE__, __LINE__);
 
     else
     {
-        if(index >= 0 && index <= iRozmiar)
-        {
-            if(size() > 0)
+
+        if(size() > 0)
+        {  
+ /* 
+            T *temp= new T[iRozmiar -1];
+
+            int j = 0;
+
+            for(int i = 0; i < size(); ++i)
             {
-                T *temp= new T[iRozmiar -1];
-
-                int j=0;
-                for(int i=0; i<size(); i++)
+                if (i != index)
                 {
-                    if (i != index)
-                    {
-                        temp[j]=dane[i];
-                        j++;
-                    }
+                    temp[j]=dane[i];
+                    j++;
                 }
-
-                delete [] dane;
-                dane = temp;
-                count--;
-                iRozmiar--;
-/*
-
-                for (int i = index; i < size(); ++i)
-                    dane[i] = dane[i+1];
-
-                //dane[size()].~T(); 
-
-                resize(iRozmiar - 1);
-                count--;
-                */
             }
 
-            return true; 
-        
+            kasuj();
+            dane = temp;
+            count--;
+            iRozmiar--;
+       */  
+      
+            for (int i = index; i < size(); ++i)
+                dane[i] = dane[i+1];
+
+            dane[size()].~T(); 
+	
+			int czujka = count;
+
+            resize(iRozmiar - 1);
+
+			if((czujka - 1) != size())			
+            	count--;
+			
+           
         }
-        else
-            cout << "\n\nwyskakuje\n";
-
+        return true; 
     }
-
    return false;
 }
 
 template<class T>
-aghVector<T>& aghVector<T>:: operator=(aghVector<T> const& right){
-
-this->aghContainer<T>::operator =(right);
-   return *this;
-
+aghVector<T>& aghVector<T>::operator=(aghVector<T> const & right)
+{
+    this->aghContainer<T>::operator =(right);
+        return *this;
 }
 
 //------------------------------------------------------------------------

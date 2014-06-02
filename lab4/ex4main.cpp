@@ -25,25 +25,21 @@ int main(void)
     showTestResult(1, t1);
 
     // 2nd test - konstruktor
-
     c2 = new aghVector<int>(*c1);
-
-
-
     bool t2 = c2->size() == 3;
     int ttab2[] = {2, 3, 2};
     for(int i=0;i<3;i++)
         t2 = t2 && (ttab2[i] == c2->at(i));
     showTestResult(2, t2);
-/*
+
     // 3rd test - odwolania
     try
     {
-        //c2->at(-1);
-        //c2->at(100);
-        //c2->at(c2->size());
-        //(*c2)[-10];
-        //(*c2)[100];
+        c2->at(-1);
+        c2->at(100);
+        c2->at(c2->size());
+        (*c2)[-10];
+        (*c2)[100];
         showTestResult(3, true);
     }
     catch(aghException& e)
@@ -54,23 +50,14 @@ int main(void)
     {
         showTestResult(3, false);
     }
-*/
+
     // 4th test - usuwanie z pojemnika
     c1->clear();
-
-
-  
     for(int i=0;i<5;i++)
         *c1 += i;
-
-
     *c1 << 4 << 2+3;
-
-
-    
     c1->remove(2);
 
- 
     int ttab4[] = {0, 1, 3, 4, 4, 5};
     bool t4 = c1->size() == 6;
     for(int i=0;t4 && i<6;i++)

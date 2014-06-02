@@ -1,57 +1,117 @@
+/**
+* \file aghVector.h
+* \authors Jakub Syrek & Katarzyna 呕ukowska
+* \date 31.05.2014
+* \version 1.0
+* \brief Plik nag艂贸wkowy z deklarajc膮 klasy szablonu aghVector dziedzicz膮cej po klasie aghContainer
+*/
+
 #ifndef AGHVECTOR_H
 #define AGHVECTOR_H
 
-#include "aghContainer.h"
-
-
+/**
+* \class aghVector
+* \authors Jakub Syrek & Katarzyna 呕ukowska
+* \date 31.05.2014
+* \brief Klasa aghVector dziedzicz膮ca po klasie aghContainer
+*/
 template<class T>
 class aghVector : public aghContainer<T>
 {
 
-    private:
+    private:          
+   
+        T *dane;        ///< wskaznik na tablice dane
 
-        T *dane;
-        int iRozmiar;
-        int count;
+        int iRozmiar;   ///< Rozmiar tablicy
 
+        int count;      ///< ilosc elementow
+
+       /**
+       * @brief Metoda kt贸ra zmienia rozmiar pojemnika
+       * @param nowyRozmiar - nowy Rozmiar
+       * @return Nic nie zwraca
+       */
         void resize(int nowyRozmiar);
 
+       /**
+       * @brief Metoda usuwa pamiec przydzielona do tablicy
+       * @return Nic nie zwraca
+       */
         void kasuj();
 
+       /**
+       * @brief Metoda zwieksza rozmiar tablicy o jeden
+       * @return Nic nie zwraca
+       */
         void powieksz();
 
+       /**
+       * @brief Sprawdza czy w tablicy jest wolne miejsce
+       * @return Ilosc wolnych miejsc
+       */
         int wolneMiejsce();
 
     public:
 
+       /**
+       * @brief Konstruktor
+       */
         aghVector();
 
-        aghVector(aghVector<T> const & kopia);
+       /**
+       * @brief Konstruktor kopiuj膮cy
+       * @param right - pojemnik
+       */
+       aghVector(aghContainer<T> const &);
 
-      	aghVector(aghContainer<T> const & other);
+        /**
+       * @brief Dekonstruktor
+       */
+        ~aghVector();
 
-      	~aghVector();
+//------------------------------------------------------------------------
+
+       /**
+       * @brief Metoda kt贸ra "wklada" element do pojemnika
+       * @param index - index
+       * @param element - wrzucany element
+       * @return Wartosc logiczna
+       */
+        bool insert(int index, T const & element);
+
+        /**
+       * @brief Metoda kt贸ra pobiera element z pojemnika
+       * @param index - index
+       * @return Pobrany element
+       */
+        T& at(int index) const;
+
+        /**
+       * @brief Metoda kt贸ra pobiera ilosc elementow
+       * @return Liczba elementow
+       */
+        int size(void) const; 
+
+        /**
+       * @brief Metoda kt贸ra usuwa element
+       * @param index - index
+       * @return Wartosc logiczna
+       */
+        bool remove(int index);
 
 //------------------------------------------------------------------------
 
-        bool insert(int, T const &);  //wstawianie elementu do pojemnika
-
-        T& at(int) const;  //Metoda zwracaj筩a warto滄 elementu
-
-        int size(void) const;  // Metoda zwracaj筩a ilo滄 element體
-
-        bool remove(int);   //Metoda usuwaj筩a wybrany element
-
-//------------------------------------------------------------------------
+       /**
+       * @brief Operator =
+       * @param right - element
+       * @return Pojemnik
+       */
         aghVector<T>& operator=(aghVector<T> const& right);
 
 
 };
 
-
-
 //------------------------------------------------------------------------
 //------------------------------------------------------------------------
-
-
 #endif
