@@ -8,6 +8,8 @@ int main(void)
 {
     cout << "main by kk. Last updated 15.04.2013\n";
 
+    //cout << "\n\n\n tutaj \n\n\n";
+
     aghVector<aghVector<int> > a;
     aghContainer<int>* c1 = new aghVector<int>;
     aghContainer<int>* c2;

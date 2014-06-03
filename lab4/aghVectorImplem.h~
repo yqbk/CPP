@@ -8,7 +8,7 @@ template<class T>
 aghVector<T>::aghVector()
 {
     dane = NULL;
-    iRozmiar = 1;
+    iRozmiar = 10;
     count = 0;    
 
     resize(iRozmiar);
@@ -18,9 +18,11 @@ template<class T>
 aghVector<T>::aghVector(aghContainer<T> const & other) 
 {
     dane = NULL;
-    iRozmiar = 1;
+    iRozmiar = 10;
     count = 0;   
     
+
+
     resize(iRozmiar);
 
     this->aghContainer<T>::operator =(other);
@@ -37,6 +39,7 @@ template<class T>
 void aghVector<T>::powieksz()
 {
     resize(iRozmiar + 1);
+    iRozmiar++;
 }
 
 template<class T>
@@ -54,13 +57,26 @@ void aghVector<T>::resize(int nowyRozmiar)
 
     else
     {
-        int ileEl = size() < nowyRozmiar ? size() : nowyRozmiar;
+
+         //cout << "\n\n\n tutaj 2 \n\n\n";
+
         T *temp = new T[nowyRozmiar];
+
+        int ileEl = size() < nowyRozmiar ? size() : nowyRozmiar;
 
         if(dane != NULL) 
         {
-            int minsize = count < nowyRozmiar ? count : nowyRozmiar;
-            memcpy(temp, dane, minsize*sizeof(T));
+            int roznica = nowyRozmiar - size();
+            
+            if (roznica < 0)      
+                for (int i = size(); i > nowyRozmiar ; --i)                
+                    dane[i].~T(); 
+
+            //memcpy(temp, dane, nowyRozmiar*sizeof(T) ); 
+            for(int i = 0; i < nowyRozmiar && i < size(); i++)  // copy elements
+                temp[i] = dane[i];
+      
+            
             this->kasuj();
         }                       
     
@@ -75,9 +91,8 @@ void aghVector<T>::kasuj()
 {
     if( dane != NULL)
         delete [] dane;
+
     dane = NULL;
-    count = 0;
-    iRozmiar = 0;
 }
 
 
@@ -141,11 +156,44 @@ bool aghVector<T>::remove(int index)
 
         if(size() > 0)
         {  
+ /* 
+            T *temp= new T[iRozmiar -1];
 
-            for (int i = index; i < size()-1; ++i)
+            int j = 0;
+
+            for(int i = 0; i < size(); ++i)
+            {
+                if (i != index)
+                {
+                    temp[j]=dane[i];
+                    j++;
+                }
+            }
+
+            kasuj();
+            dane = temp;
+            count--;
+            iRozmiar--;
+       */  
+
+
+            for (int i = index; i < (size() - 1); ++i)
                 dane[i] = dane[i+1];
-                // max: dane[size()-2] = dane[size()-1];
+
+
+
+            dane[size()].~T(); 
+
+	
+			int czujka = count;
+
             resize(iRozmiar - 1);
+
+
+
+			if((czujka - 1) != size())			
+            	count--;
+
 			
            
         }
