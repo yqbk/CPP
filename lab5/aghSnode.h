@@ -5,18 +5,6 @@ template<class T>
 class aghSnode
 {
 
-    public:
-
-        aghSnode(T data);
-        aghSnode();
-        ~aghSnode();
-
-        T& getData();
-        void setData(T data);
-
-        aghSnode<T>* getNext();
-        void setNext(aghSnode<T>* ptrNext);
-
     private:
 
        aghSnode<T>* ptrNext;
@@ -24,6 +12,18 @@ class aghSnode
     protected:
 
         T data;
+
+    public:
+
+        aghSnode(T data);
+        aghSnode();
+        ~aghSnode();
+
+        T& getData();               //const?
+        void setData(T data);
+
+        aghSnode<T>* getNext() const;
+        void setNext(aghSnode<T>* ptrNext);
 
 };
 

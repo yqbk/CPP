@@ -31,47 +31,52 @@ aghSlist<T>::~aghSlist()
  bool aghSlist<T>::insert(int index, T const & element)
  {
      if (index < 0 || index > this->size())
-        throw aghException(0, "Niepoprawny index", __FILE__, __LINE__);
+        throw aghException(0, "Niepoprawny index", __FILE__, __LINE__);            ///Poza indexem
 
-     aghSnode<T>* newElement = new aghSnode<T>(element);
+    else
+    {
+        aghSnode<T>* newElement = new aghSnode<T>(element);
 
-     if (this->ptrRoot == NULL)     
-        this->ptrRoot = newElement;
+        if (this->ptrRoot == NULL)                                                 ///Nowa lista
+            this->ptrRoot = newElement;
      
-     if (index == 0)
-     {
-         newElement->setNext(this->ptrRoot);
-         this->ptrRoot = newElement;
-     }
-     else
-     {
-         aghSnode<T>* aktualny = this->ptrRoot;
+        if (index == 0)                                                            ///Dodaj na poczatku
+        {
+            newElement->setNext(this->ptrRoot);
+            this->ptrRoot = newElement;
+        }
+        else                                                                       ///Dodaj w srodku
+        {
+            aghSnode<T>* aktualny = this->ptrRoot;
 
-         for (int i = 0; i < index - 1; i++)         
-             aktualny = aktualny->getNext();         
+            for (int i = 0; i < index - 1; i++)         
+                aktualny = aktualny->getNext();         
 
-         newElement->setNext(aktualny->getNext());
-         aktualny->setNext(newElement);
-     }
-     
-     this->iSize++;
-     return true;
+            newElement->setNext(aktualny->getNext());
+            aktualny->setNext(newElement);
+        }
+
+        this->iSize++;
+        return true;
+    }
+    return false;
 }
 
 template<class T>
 T& aghSlist<T>::at(int index) const
 {
-    if(index < 0 || index >= this->size())
-    {
-        throw aghException(0, "out of range", __FILE__, __LINE__);
-    }
+    if (index < 0 || index > this->size())
+        throw aghException(0, "Niepoprawny index", __FILE__, __LINE__);
 
-    aghSnode<T>* tmp = this->ptrRoot;
-    for(int i=0; i < index; i++)
+    else
     {
-        tmp = tmp->getNext();
+        aghSnode<T>* temp = this->ptrRoot;
+
+        for(int i=0; i < index; i++)    
+            temp = temp->getNext();
+    
+        return temp->getData();
     }
-    return tmp->getData();
 }
 
 template<class T>
@@ -83,26 +88,28 @@ int aghSlist<T>::size(void) const
 template<class T>
 bool aghSlist<T>::remove(int index)
 {
-    if (index < 0 || index >= this->size())
-    {
+    if (index < 0 || index >= this->size())                         ///Poza indexem    
         return false;
-    }
-    if (index == 0)
+    
+    if (index == 0)                                                 ///Usun z poczatku
     {
         aghSnode<T>* aktualny = this->ptrRoot;
+
         this->ptrRoot = aktualny->getNext();
         delete aktualny;
     }
-    else
+    else                                                            ///Usun ze srodka
     {
         aghSnode<T>* aktualny = this->ptrRoot;
-        for (int i = 0; i < index - 1; i++)
-        {
-            aktualny = aktualny->getNext();
-        }
+
+        for (int i = 0; i < index - 1; i++)        
+            aktualny = aktualny->getNext();        
+
         aghSnode<T>* doUsuniecia = aktualny;
+
         doUsuniecia = doUsuniecia->getNext();
         aktualny->setNext(doUsuniecia->getNext());
+
         delete doUsuniecia;
     }
     this->iSize--;

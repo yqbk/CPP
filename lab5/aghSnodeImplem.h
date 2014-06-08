@@ -34,7 +34,7 @@ void aghSnode<T>::setData(T data)
 }
 
 template<class T>
-aghSnode<T>* aghSnode<T>::getNext()
+aghSnode<T>* aghSnode<T>::getNext() const
 {
     return this->ptrNext;
 }

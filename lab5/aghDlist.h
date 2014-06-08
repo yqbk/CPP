@@ -6,6 +6,12 @@
 template<class T>
 class aghDlist : public aghContainer<T>
 {
+    private:
+
+        aghDnode<T>* ptrRoot;
+        aghDnode<T>* ptrEnd;
+        int iSize;
+
     public:
 
         aghDlist();
@@ -18,15 +24,6 @@ class aghDlist : public aghContainer<T>
         bool remove(int index);
 
         aghDlist<T>& operator=(aghDlist<T> const &);
-
-    private:
-
-        aghDnode<T>* ptrRoot;
-        aghDnode<T>* ptrEnd;
-        int iSize;
-
-
-
 };
 
 

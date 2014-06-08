@@ -19,16 +19,17 @@ aghDnode<T>::aghDnode(T data)
 template<class T>
 aghDnode<T>::~aghDnode()
 {
+
 }
 
 template<class T>
-aghDnode<T>* aghDnode<T>::getNext()
+aghDnode<T>* aghDnode<T>::getNext() const
 {
      return this->ptrNext;
 }
 
 template<class T>
-aghDnode<T>* aghDnode<T>::getPrev()
+aghDnode<T>* aghDnode<T>::getPrev() const
 {
     return this->ptrPrev;
 }
