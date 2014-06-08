@@ -19,7 +19,7 @@ class aghSnode
         aghSnode();
         ~aghSnode();
 
-        T& getData();               //const?
+        T& getData();
         void setData(T data);
 
         aghSnode<T>* getNext() const;
