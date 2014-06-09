@@ -44,9 +44,8 @@ void aghSlist<T>::nowaLista(T const& element)
 template<class T>
 void aghSlist<T>::dodajPocz(T const& element)
 {
-    aghSnode<T>* newElement = new aghSnode<T>(element);
+    aghSnode<T>* newElement = new aghSnode<T>(element, ptrRoot);
 
-    newElement->setNext(this->ptrRoot);
     this->ptrRoot = newElement;
 }
 
@@ -59,13 +58,13 @@ void aghSlist<T>::dodajEnd(T const& element)
 template<class T>
 void aghSlist<T>::dodaj(T const & element, int index)
 {
-    aghSnode<T>* newElement = new aghSnode<T>(element);
+    
     aghSnode<T>* aktualny = this->ptrRoot;
 
     for (int i = 0; i < index - 1; i++)         
         aktualny = aktualny->getNext();         
 
-    newElement->setNext(aktualny->getNext());
+    aghSnode<T>* newElement = new aghSnode<T>(element, aktualny->getNext());
     aktualny->setNext(newElement);
 }
 
@@ -133,7 +132,7 @@ aghSnode<T>* aghSlist<T>::getNode(int n) const
     else
     {             
         if (index == 0) 
-        {                                                       
+        {         
             dodajPocz(element);            
         }
 

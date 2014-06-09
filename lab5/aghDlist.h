@@ -23,6 +23,8 @@ class aghDlist : public aghSlist<T>
        aghDnode<T>* ptrRoot;   ///< poczatek listy
        aghDnode<T>* ptrEnd;    ///< koniec listy
 
+       int rozmiar;
+
        /**
        * @brief Metoda wirtualna ktora tworzy zalazek listy
        * @param element - dane ktore dodajemy do listy

@@ -9,11 +9,11 @@ aghDnode<T>::aghDnode()
 }
 
 template<class T>
-aghDnode<T>::aghDnode(T data)
+aghDnode<T>::aghDnode(T data, aghDnode* poprzedni, aghDnode* nastepny)
 {
     this->data = data;
-    this->ptrNext = NULL;
-    this->ptrPrev = NULL;
+    this->setNext(nastepny);
+    this->setPrev(poprzedni);
 }
 
 template<class T>

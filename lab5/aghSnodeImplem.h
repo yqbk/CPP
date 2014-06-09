@@ -9,10 +9,10 @@ aghSnode<T>::aghSnode()
 }
 
 template<class T>
-aghSnode<T>::aghSnode(T data)
+aghSnode<T>::aghSnode(T data, aghSnode* nastepny)
 {
     this->data = data;
-    this->ptrNext = NULL;
+    this->setNext(nastepny);
 }
 
 template<class T>
