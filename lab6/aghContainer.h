@@ -153,10 +153,7 @@ class aghContainer
        * @param right - pojemnik
        * @return Pojemnik
        */
-        aghContainer<T> & operator<<(aghContainer<T> const &);
-
-
-        
+        aghContainer<T> & operator<<(aghContainer<T> const &);      
 
 };
 
