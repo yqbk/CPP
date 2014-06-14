@@ -4,14 +4,33 @@
 template<class T>
 class aghTree : public aghContainer<T>
 {
+    private:
+
+        aghTreeNode<T>* wskRoot;
+        unsigned int iRozmiar;
+
+        aghTreeNode<T>* getNode(int) const;
+        aghTreeNode<T>* getRoot() const;
+        aghTreeNode<T>* getNajmniejszy(aghTreeNode<T>*) const;
+        int getLength(aghTreeNode<T>* node) const;
+        aghTreeNode<T>* getCons(aghTreeNode<T>* node); 
+
+
+        void setRoot(aghTreeNode<T>* wskRoot);
+        void setRozmiar(unsigned int iRozmiar);
+
+        
+
     public:
+
         aghTree();
         aghTree(aghContainer<T> & kopia);
         ~aghTree();
-        void setKorzen(aghTreeNode<T>* wskKorzen);
-        aghTreeNode<T>* getKorzen();
-        void przejdz(aghTreeNode<T>* node); //nadaje indexy
-        void setRozmiar(unsigned int iRozmiar);
+
+
+
+//--------------------------------------------------------------------------
+
         /**
        * @brief Metoda virtualna która "wklada" element do pojemnika
        * @param index - index
@@ -39,10 +58,8 @@ class aghTree : public aghContainer<T>
        * @return Wartosc logiczna
        */
        bool remove(int index);
-    protected:
-    private:
-        aghTreeNode<T>* wskKorzen;
-        unsigned int iRozmiar;
+
+       aghTree<T> const & operator=(aghTree<T> const &);
 
 };
 

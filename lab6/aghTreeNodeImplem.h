@@ -10,11 +10,18 @@ aghTreeNode<T>::aghTreeNode()
 }
 
 template<class T>
+aghTreeNode<T>::aghTreeNode(T dane, aghTreeNode<T>* wskPoprzedni, aghTreeNode<T>* wskLewy, aghTreeNode<T>* wskPrawy)
+{
+	setNode(dane, wskPoprzedni, wskLewy, wskPrawy);
+}
+
+template<class T>
 aghTreeNode<T>::~aghTreeNode()
 {
     //dtor
 }
 
+//--------------------------------------------------------------------------
 template<class T>
 void aghTreeNode<T>::setDane(T dane)
 {
@@ -40,25 +47,35 @@ void aghTreeNode<T>::setPoprzedni(aghTreeNode<T>* wskPoprzedni)
 }
 
 template<class T>
-aghTreeNode<T>* aghTreeNode<T>::getPrawy()
+void aghTreeNode<T>::setNode(T dane, aghTreeNode<T>* wskPoprzedni, aghTreeNode<T>* wskLewy, aghTreeNode<T>* wskPrawy)
+{
+	setLewy(wskPrawy);
+	setPrawy(wskPrawy);
+	setPoprzedni(wskPoprzedni);
+	setDane(dane);
+}
+
+//--------------------------------------------------------------------------
+template<class T>
+aghTreeNode<T>* aghTreeNode<T>::getPrawy() const
 {
     return this->wskPrawy;
 }
 
 template<class T>
-aghTreeNode<T>* aghTreeNode<T>::getLewy()
+aghTreeNode<T>* aghTreeNode<T>::getLewy() const
 {
     return this->wskLewy;
 }
 
 template<class T>
-aghTreeNode<T>* aghTreeNode<T>::getPoprzedni()
+aghTreeNode<T>* aghTreeNode<T>::getPoprzedni() const
 {
     return this->wskPoprzedni;
 }
 
 template<class T>
-T aghTreeNode<T>::getDane()
+T& aghTreeNode<T>::getDane()
 {
     return this->dane;
 }

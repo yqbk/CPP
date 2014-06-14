@@ -13,10 +13,12 @@ int main(void)
     aghTree<int>* c2;
     a << *((aghVector<int>*)c1);
 
+
     // 1st test - dodawanie do pojemnika stalych, zmiennych, tymczasowych
     c1->append(3);
     c1->insert(0, 1+4);
     c1->insert(c1->size(), c1->size());
+
 
     bool t1 = c1->size() == 3;
     int ttab1[] = {5, 3, 2};
@@ -25,7 +27,9 @@ int main(void)
     showTestResult(1, t1);
 
     // 2nd test - konstruktor
+ 
     c2 = new aghTree<int>(*c1);
+
     bool t2 = c2->size() == 3;
     int ttab2[] = {2, 3, 5};
     for(int i=0;i<3;i++)
@@ -51,8 +55,26 @@ int main(void)
     }
 
     // 4th test - usuwanie z pojemnika
+/*
+for (int i = 0; i < c2->size(); ++i)
+{
+    cout << endl << " -- " << c2->at(i);
+}
+
+
+    //c2->remove(2);
+
+cout << "\n\n po remove: \n";
+for (int i = 0; i < c2->size(); ++i)
+{
+    cout << endl << " -- " << c2->at(i);
+}
+*/
+
+
     c2->clear();
-    for(int i=0;i<5;i++)
+
+   for(int i=0;i<5;i++)
         *c2 += i;
     *c2 << 4 << 2+3 << -5 << 3;
     c2->remove(2);
@@ -144,6 +166,7 @@ int main(void)
         showTestResult(15, false);
     }
 
+    cout << endl << endl;
     cout << "Finally, this is the end...\n";
 
     return 0;

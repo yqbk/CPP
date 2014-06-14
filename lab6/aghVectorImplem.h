@@ -50,7 +50,10 @@ template<class T>
 void aghVector<T>::resize(int nowyRozmiar)
 {
     if(nowyRozmiar < 0)
+    {
+        cout << "\n\n error resize\n";
       throw aghException(3, "Blad pamieci", __FILE__, __LINE__);    
+    }
 
     else
     {
@@ -92,7 +95,10 @@ template<class T>
 T& aghVector<T>::at(int index) const
 {
     if( (index < 0) || (index >= size()) ) 
+    {
+        cout << "\n\n error at\n";
         throw aghException(1, "Niepoprawny index", __FILE__, __LINE__);
+    }
 
     else
         return dane[index];   
@@ -102,7 +108,10 @@ template<class T>
 bool aghVector<T>::insert(int index, T const& element)
 {
     if( (index < 0) || (index > iRozmiar)) 
+    {
+        cout << "\n\n error insert\n";
         throw aghException(1, "Niepoprawny index", __FILE__, __LINE__);
+    }
 
     else
     {
@@ -134,7 +143,10 @@ template<class T>
 bool aghVector<T>::remove(int index) 
 {   
     if( (index < 0) || index > iRozmiar) 
+    {
+        cout << "\n\n error remove\n";
         throw aghException(1, "Niepoprawny index", __FILE__, __LINE__);
+    }
 
     else
     {

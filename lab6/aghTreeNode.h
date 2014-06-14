@@ -4,23 +4,31 @@
 template<class T>
 class aghTreeNode
 {
+	private:
+
+        aghTreeNode<T>* wskPrawy;
+        aghTreeNode<T>* wskLewy;
+        aghTreeNode<T>* wskPoprzedni;
+
+        T dane;
+
     public:
+
         aghTreeNode();
+        aghTreeNode(T, aghTreeNode<T>* = NULL, aghTreeNode<T>* = NULL, aghTreeNode<T>* = NULL);
         ~aghTreeNode();
+
         void setDane(T dane);
         void setPrawy(aghTreeNode<T>* wskPrawy);
         void setLewy(aghTreeNode<T>* wskLewy);
         void setPoprzedni(aghTreeNode<T>* wskPoprzedni);
-        aghTreeNode<T>* getPrawy();
-        aghTreeNode<T>* getLewy();
-        aghTreeNode<T>* getPoprzedni();
-        T getDane();
-    protected:
-    private:
-        aghTreeNode<T>* wskPrawy;
-        aghTreeNode<T>* wskLewy;
-        aghTreeNode<T>* wskPoprzedni;
-        T dane;
+        void setNode(T, aghTreeNode<T>* = NULL, aghTreeNode<T>* = NULL, aghTreeNode<T>* = NULL);
+
+        aghTreeNode<T>* getPrawy() const;
+        aghTreeNode<T>* getLewy() const;
+        aghTreeNode<T>* getPoprzedni() const;
+
+        T& getDane();
 
 };
 
