@@ -13,7 +13,6 @@ class aghTree : public aghContainer<T>
         aghTreeNode<T>* getRoot() const;
         aghTreeNode<T>* getNajmniejszy(aghTreeNode<T>*) const;
         int getLength(aghTreeNode<T>* node) const;
-        aghTreeNode<T>* getCons(aghTreeNode<T>* node); 
 
 
         void setRoot(aghTreeNode<T>* wskRoot);

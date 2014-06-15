@@ -203,7 +203,25 @@ bool aghTree<T>::remove(int index)
       if(!usuwany->getLewy() || !usuwany->getPrawy())
          temp = usuwany;
       else
-         temp = getCons(usuwany);
+      {
+      	//----------------------------------------
+      	aghTreeNode < T > * podstawienie = NULL;
+      if(usuwany->getPrawy())
+         podstawienie = getNajmniejszy(usuwany->getPrawy());
+      else 
+      {
+         aghTreeNode<T>* tempp;
+         podstawienie = usuwany;
+
+         do {
+            tempp = podstawienie;
+            podstawienie = podstawienie->getPoprzedni();
+         } while(podstawienie && (podstawienie->getLewy() != tempp));
+      }
+
+      	//----------------------------------------
+         temp = podstawienie;
+      }
 
 
       if(temp->getLewy())
@@ -233,29 +251,6 @@ bool aghTree<T>::remove(int index)
 
   return true;
 
-}
-
-template<class T> aghTreeNode<T>* aghTree<T>::getCons(aghTreeNode<T>* node) 
-{
-   aghTreeNode < T > *result = NULL;
-
-   if(node) 
-   {
-
-      if(node->getPrawy())
-         result = getNajmniejszy(node->getPrawy());
-      else 
-      {
-         aghTreeNode < T > *temp;
-         result = node;
-
-         do {
-            temp = result;
-            result = result->getPoprzedni();
-         } while(result && (result->getLewy() != temp));
-      }
-   }
-   return result;
 }
 
 template<class T>
